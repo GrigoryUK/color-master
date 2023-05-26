@@ -1,13 +1,25 @@
 
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
+  --font-family: "Aquawax Pro", sans-serif;
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --white: #fff;
-  --black: #0000;
-  --beige:  #FFF8F0;
+  --white-primary: #fff;
+  --white-secondary: #F9F9F9;
+  --white-secondary-hover: #F0F0F0;
+  --white-third: #EAEBEC;
+
+  --black-primary: #424A52;
+  --black-secondary: #303E47;
+
+  --red-primary: #D61C38;
+  --red-primary-hover: #BD1831;
+
+
+  // z-index
+  --z-header-search: 11;
+  --z-header-sub: -1;
 }

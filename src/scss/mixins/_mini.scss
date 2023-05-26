@@ -58,3 +58,24 @@ $browser-context: 16; // Default
     content: "";
     display: block;
 }
+
+@mixin font-light() {
+  font-family: "Aquawax Pro", sans-serif;
+  font-weight: 300;
+}
+
+@mixin font-regular() {
+  font-family: "Aquawax Pro", sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-medium() {
+  font-family: "Aquawax Pro", sans-serif;
+  font-weight: 500;
+}
+
+@mixin font-bold() {
+  font-family: "Aquawax Pro", sans-serif;
+  font-weight: 800;
+}
+

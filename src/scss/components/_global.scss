@@ -1,0 +1,49 @@
+.buttonC {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.caretC {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-bottom: 2px;
+
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 7px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+
+    background-color: var(--black-primary);
+
+    transform: translate(-2px, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(2px, -50%) rotate(-45deg);
+  }
+
+  &.caretC-rotate {
+
+    &::before,
+    &::after {
+      background-color: var(--white-primary);
+
+      transform: translate(-2px, -50%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(2px, -50%) rotate(45deg);
+    }
+  }
+}
