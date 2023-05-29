@@ -22,8 +22,9 @@ html {
   font-family: "Aquawax Pro", sans-serif;
   line-height: 1.5;
   color: var(--black-primary);
+  font-weight: 400;
   background: var(--white-primary);
-  background: darkred;
+  //background: darkred;
 }
 
 img {
@@ -35,8 +36,6 @@ img {
 }
 
 svg {
-  height: 100%;
-  width: 100%;
   transition: all 0.2s ease;
 }
 
@@ -55,16 +54,14 @@ button {
   transition: all 0.2s ease;
 }
 
-input {
+input,textarea {
   outline: none;
   transition: all 0.2s ease;
 }
 
 .site-container {
   overflow: hidden;
-  @include tablet {
-    overflow: hidden;
-  }
+
 }
 
 .is-hidden {
@@ -114,6 +111,10 @@ input {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include tablet {
+    padding: 0 15px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -140,4 +141,21 @@ input {
 
 .display-none {
   display: none !important;
+}
+
+.container-minus-header {
+
+  height: calc(100vh - var(--height-header-desk));
+
+  @include big-desktop {
+    height: calc(100vh - var(--height-header-laptop));
+  }
+
+  @include min-desktop {
+    height: calc(100vh - var(--height-header-laptop-min));
+  }
+
+  @include tablet {
+    height: calc(100vh - var(--height-header-tablet));
+  }
 }

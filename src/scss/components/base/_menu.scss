@@ -9,6 +9,7 @@
     height: 100vh;
     background: var(--white-primary);
     overflow: auto;
+    z-index: var(--z-menu);
   }
 
   .menu {

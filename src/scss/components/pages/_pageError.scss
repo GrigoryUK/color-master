@@ -1,0 +1,60 @@
+.pageError {
+  position: relative;
+
+  &__container {
+    max-width: 1128px;
+    padding: 0 64px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include small-tablet {
+      top: auto;
+      left: auto;
+      transform: none;
+      position: relative;
+      padding-top: 50px;
+    }
+
+    @include mobile {
+      padding: 50px 15px 0;
+    }
+
+    svg {
+      max-width: 476px;
+      @include mbAll(70, 70, 40);
+
+      @include mobile {
+        max-width: 345px;
+
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 140%;
+      margin: 0;
+      @include mbAll(50, 50, 40);
+      text-align: center;
+
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    .buttonC {
+      max-width: 170px;
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+  }
+
+}

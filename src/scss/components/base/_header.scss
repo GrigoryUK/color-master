@@ -1,6 +1,7 @@
 .header {
   position: relative;
   background: var(--white-primary);
+  z-index: var(--z-header-fixed);
 
   @include tablet {
     position: fixed;
@@ -660,5 +661,11 @@
   }
 
 
+}
+
+.header-padding-top {
+  @include tablet {
+    padding-top: 81px;
+  }
 }
 
