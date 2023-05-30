@@ -79,3 +79,7 @@ $browser-context: 16; // Default
   font-weight: 800;
 }
 
+@mixin transitionMain() {
+  transition: all 0.2s ease;
+}
+

@@ -1,0 +1,298 @@
+.blockTabs {
+
+  &.primary {
+
+    .tabs {
+
+      &__nav {
+        margin: 0 auto;
+        padding: 0 var(--container-offset);
+        max-width: var(--container-width);
+
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 70px;
+
+        @include tablet {
+          padding: 0 15px;
+          margin-bottom: 50px;
+        }
+
+        @include mobile {
+          margin-bottom: 30px;
+        }
+
+
+
+        &-item {
+          text-align: center;
+          width: 100%;
+          border-top: 1px solid var(--white-third);
+          border-bottom: 1px solid var(--white-third);
+          border-right: 1px solid var(--white-third);
+
+          &:first-child {
+            border-left: 1px solid var(--white-third);
+
+            @include tablet {
+              border: none;
+
+            }
+          }
+
+          @include tablet {
+            border: none;
+
+          }
+
+
+
+        }
+
+        &-btn {
+          width: 100%;
+          background: none;
+          cursor: pointer;
+          border: none;
+          text-align: center;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 160%;
+          text-transform: uppercase;
+          background: var(--white-primary);
+          padding-top: 19px;
+          padding-bottom: 20px;
+
+
+
+          &--active {
+            background: var(--black-primary);
+            color: var(--white-primary);
+
+            @include tablet {
+              background: var(--white-third);
+              color: var(--black-primary);
+            }
+          }
+
+          &:not(.tabs__nav-btn--active) {
+            @include hover {
+              background: var(--white-third);
+            }
+          }
+
+
+        }
+
+
+      }
+
+      &__content {
+        margin: 0 auto;
+        padding: 0 var(--container-offset);
+        max-width: var(--container-width);
+        @include tablet {
+          padding: 0 15px;
+        }
+      }
+
+
+      .tab-to-dropdown {
+        @include tablet {
+          padding: 0 15px;
+          position: relative;
+          margin-bottom: 70px;
+        }
+      }
+
+      .converted-tab {
+
+        @include tablet {
+          position: absolute;
+          top: 100%;
+          left: -15px;
+          width: 100%;
+          margin: 0 15px;
+          padding: 0 15px;
+          display: flex;
+          align-items: center;
+          z-index: var(--z-index-tabs-dropdown);
+          flex-direction: column;
+        }
+
+      }
+
+      .selected-tab {
+
+        @include tablet {
+          position: relative;
+          height: 65px;
+          padding: 22px 15px 21px;
+
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 160%;
+          text-transform: uppercase;
+          color: var(--white-primary);
+          background-color: var(--black-primary);
+
+          &:after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border: solid var(--white-primary);
+            border-width: 2px 0 0 2px;
+            transform: translate(0, -50%) rotate(-135deg);
+            position: absolute;
+            right: 15px;
+            top: 45%;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+
+
+
+.blockTabsPanel {
+
+  &.home {
+
+    .blockTabsPanel {
+
+      &__content {
+        max-width: 1514px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 150px;
+
+        @include tablet {
+          padding-bottom: 130px;
+        }
+
+        .titleC {
+          margin-bottom: 100px;
+
+          @include tablet {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      &__box {
+        display: flex;
+        gap: 44px;
+        align-items: flex-start;
+        width: 100%;
+
+        @include tablet {
+          flex-direction: column-reverse;
+        }
+
+        &--left {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          align-items: flex-start;
+          max-width: 595px;
+        }
+
+        &--right {
+          position: relative;
+          transform: translate(0, -50px);
+
+          @include tablet {
+            transform: translate(-18%, 0px);
+
+          }
+          .image {
+            border-radius: 100%;
+            max-width: 635px;
+            max-height: 635px;
+          }
+
+          .image-1 {
+            position: absolute;
+            z-index: -1;
+            left: 200px;
+
+
+          }
+        }
+
+        .itemCom {
+          display: flex;
+          gap: 30px;
+          &__icon {
+            min-width: 60px;
+            min-height: 60px;
+            max-width: 60px;
+            max-height: 60px;
+            border-radius: 100px;
+            background: #F6F6F6;
+            position: relative;
+            margin-top: -15px;
+            @include transitionMain;
+
+            svg {
+              max-width: 22px;
+              fill: var(--red-primary);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+          }
+
+          &__box {
+            max-width: 595px;
+          }
+
+          &__title {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 160%;
+            margin-bottom: 20px;
+            @include transitionMain;
+          }
+
+          &__text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 160%;
+          }
+
+          @include hover {
+
+            .itemCom__icon {
+              background: var(--red-primary);
+              svg {
+                fill: var(--white-primary);
+              }
+            }
+
+            .itemCom__title {
+              color: var(--red-primary);
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+

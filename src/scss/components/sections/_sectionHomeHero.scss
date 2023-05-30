@@ -1,0 +1,245 @@
+.sectionHomeHero {
+
+  @include mobile {
+    margin-bottom: 70px;
+  }
+
+  &__container {
+
+    &.desk {
+      position: relative;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      grid-template-rows: repeat(2, calc(50vh - (var(--height-header-desk) / 2)));
+
+      @include big-desktop {
+        grid-template-rows: repeat(2, calc(50vh - (var(--height-header-laptop) / 2)));
+      }
+
+      @include min-desktop {
+        grid-template-rows: repeat(2, calc(50vh - (var(--height-header-laptop-min) / 2)));
+      }
+
+      @include tablet {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, 436px);
+      }
+
+      @include small-tablet {
+        grid-template-rows: repeat(4, 336px);
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      .itemCom {
+        display: block;
+        position: relative;
+
+        &--1 {
+          grid-column: 1 / 8 span;
+          grid-row: 1 / 1 span;
+
+          @include tablet {
+            grid-column: 1 / 8 span;
+            grid-row: 1 / 1 span;
+          }
+        }
+
+        &--2 {
+          grid-column: 9 / 4 span;
+          grid-row: 1 / 2 span;
+
+          @include tablet {
+            grid-column: 1 / 4 span;
+            grid-row: 3 / 2 span;
+          }
+        }
+
+        &--3 {
+          grid-column: 13 / 2 span;
+          grid-row: 1 / 1 span;
+
+          @include tablet {
+            grid-column: 5 / 2 span;
+            grid-row: 3 / 1 span;
+          }
+        }
+
+        &--4 {
+          grid-column: 15 / 2 span;
+          grid-row: 1 / 1 span;
+
+          @include tablet {
+            grid-column: 7 / 2 span;
+            grid-row: 3 / 1 span;
+          }
+        }
+
+        &--5 {
+          grid-column: 1 / 4 span;
+          grid-row: 2 / 1 span;
+
+          @include tablet {
+            grid-column: 1 / 4 span;
+            grid-row: 2 / 1 span;
+          }
+        }
+
+        &--6 {
+          grid-column: 5 / 2 span;
+          grid-row: 2 / 1 span;
+
+          @include tablet {
+            grid-column: 5 / 2 span;
+            grid-row: 2 / 1 span;
+          }
+        }
+
+        &--7 {
+          grid-column: 7 / 2 span;
+          grid-row: 2 / 1 span;
+
+          @include tablet {
+            grid-column: 7 / 2 span;
+            grid-row: 2 / 1 span;
+          }
+        }
+
+        &--8 {
+          grid-column: 13 / 4 span;
+          grid-row: 2 / 1 span;
+
+          @include tablet {
+            grid-column: 5 / 4 span;
+            grid-row: 4 / 1 span;
+          }
+        }
+
+
+        &__fon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #000000;
+          opacity: 0.3;
+          transition: all 0.2s ease;
+
+        }
+
+        &__image {
+          position: relative;
+        }
+
+        &__logo {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: auto;
+          height: auto;
+          max-width: 100%;
+
+          @include big-desktop {
+            max-width: 62%;
+          }
+        }
+
+        &__word {
+          margin: 0;
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 145.69%;
+          color: var(--white-primary);
+
+          @include big-desktop {
+            left: 20px;
+            bottom: 20px;
+            font-size: 13px;
+            line-height: 145.69%;
+          }
+        }
+
+        @include hover {
+
+          .itemCom__fon {
+            opacity: 0.4;
+          }
+        }
+      }
+
+
+    }
+
+    &.mobile {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+      .itemCom {
+        display: block;
+        position: relative;
+        max-height: 100px;
+
+
+        &__fon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #000000;
+          opacity: 0.4;
+          transition: all 0.2s ease;
+        }
+
+        &__row {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 0 15px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        &__image {
+          position: relative;
+        }
+
+        &__logo {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+        }
+
+        &__word {
+          margin: 0;
+          font-size: 12px;
+          line-height: 130%;
+          font-weight: 300;
+          max-width: 130px;
+          color: var(--white-primary);
+
+        }
+
+        @include hover {
+
+          .itemCom__fon {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+}

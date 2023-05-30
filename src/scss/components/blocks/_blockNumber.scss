@@ -1,0 +1,78 @@
+.blockNumber {
+
+  &.full {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include big-desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .itemCom {
+      border-bottom: 1px solid var(--white-third);
+      padding-left: 50px;
+      padding-top: 75px;
+      padding-bottom: 75px;
+      transition: all 0.2s ease;
+
+      @include big-desktop {
+        padding-left: 40px;
+        padding-top: 55px;
+        padding-bottom: 70px;
+      }
+
+      @include tablet {
+        padding-bottom: 85px;
+
+      }
+
+
+      &:not(:last-child) {
+        border-right: 1px solid var(--white-third);
+      }
+
+      h6 {
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: var(--red-primary);
+        margin: 0 0 20px;
+        max-width: 320px;
+
+        @include big-desktop {
+          font-size: 36px;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+        }
+
+
+      }
+
+      p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        text-transform: uppercase;
+        max-width: 320px;
+
+        @include big-desktop {
+          font-size: 16px;
+          line-height: 160%;
+        }
+
+        @include tablet {
+          max-width: 260px;
+        }
+      }
+
+      @include hover {
+        background: var(--white-third);
+      }
+    }
+
+  }
+
+
+}

@@ -1,0 +1,84 @@
+.blockSlider {
+
+  &.primary {
+
+    .blockSlider {
+
+      &__container {
+
+      }
+
+      &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 70px;
+      }
+
+      &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      &__arrow {
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        position: relative;
+
+
+
+        &.arrow-prev {
+          background: #F6F6F6;
+
+          @include hover {
+            background: var(--red-primary);
+          }
+
+          i {
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+
+        &.arrow-next {
+          background: var(--black-primary);
+
+          i {
+            transform: translate(-50%, -50%) rotate(135deg);
+          }
+
+          @include hover {
+            background: var(--red-primary);
+          }
+        }
+
+        i {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border: solid var(--white-primary);
+          border-width: 2px 0 0 2px;
+          transform: translate(-50%, -50%) rotate(-135deg);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transition: all 0.4s ease;
+        }
+      }
+    }
+
+    .swiper-home {
+
+      .swiper-slide {
+        border-bottom: 1px solid var(--white-third);
+        border-top: 1px solid var(--white-third);
+        border-right: 1px solid var(--white-third);
+        max-width: 456px;
+        &:first-child {
+          border-left: 1px solid var(--white-third);
+        }
+      }
+    }
+  }
+}

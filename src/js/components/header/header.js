@@ -1,8 +1,7 @@
 import $ from 'jquery';
 import {isDesktop, isMobile, isTablet} from "../../functions/check-viewport";
-import {disableScrollCustom} from "../../functions/disable-scroll";
-import {enableScrollCustom} from "../../functions/enable-scroll";
 import disableScroll from 'disable-scroll';
+import {disableScrollCustom, enableScrollCustom} from "../library/srollMove";
 
 
 export function headerJs() {

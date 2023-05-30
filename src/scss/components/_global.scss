@@ -151,3 +151,129 @@
     }
   }
 }
+
+.titleC {
+
+  &.primary {
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 160%;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 36px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+}
+
+.itemC {
+  position: relative;
+  overflow: hidden;
+
+  &.product {
+
+    .itemC {
+
+
+
+      &__button {
+
+        &--price {
+          position: absolute;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 160%;
+          text-align: center;
+          text-transform: uppercase;
+          color: var(--white-primary);
+          top: 0;
+          left: 0;
+          background: var(--black-primary);
+          padding: 22px 0;
+          width: 100%;
+          transform: translateY(-101%);
+          @include transitionMain;
+          z-index: var(--z-index-button-item-catalog);
+
+        }
+
+        &--compare {
+          position: relative;
+          background: #F9F9F9;
+          border-radius: 100px;
+          height: 50px;
+          width: 50px;
+
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 19px;
+            fill: #292D32;
+          }
+
+          @include hover {
+            background: var(--red-primary);
+
+            svg {
+              fill: var(--white-primary);
+            }
+          }
+        }
+      }
+
+      &__image {
+        img {
+          max-height: 364px;
+        }
+      }
+
+      &__row {
+        display: flex;
+        padding: 24px 20px 16px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__word {
+        max-width: 268px;
+        color: var(--black-primary);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        text-transform: uppercase;
+        @include transitionMain;
+
+      }
+
+
+
+
+    }
+
+    @include hover {
+
+      .itemC__word {
+        color: var(--red-primary);
+      }
+
+      .itemC__button--price {
+        transform: translateY(0%);
+      }
+
+      .itemC__image {
+
+        img {
+          transform: scale(0.8, 0.8);
+        }
+      }
+
+    }
+  }
+}

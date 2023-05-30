@@ -89,6 +89,10 @@
               font-size: 13px;
             }
 
+            &.focus-visible {
+              background: var(--white-third);
+            }
+
             @include hover {
               background: var(--white-third);
             }
@@ -453,8 +457,12 @@
           &--catalog {
             position: absolute;
             width: 100vw;
-            height: 50vh;
+            height: calc(50vh - (var(--height-header-desk) / 2));
             background: var(--white-primary);
+
+            @include big-desktop {
+              height: 50vh;
+            }
 
 
 

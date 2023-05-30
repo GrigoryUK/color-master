@@ -1,0 +1,47 @@
+.pageHome {
+
+  &__container {
+
+    .sectionHomeHero {
+
+      @include mobile {
+        margin-bottom: 70px;
+      }
+    }
+
+
+    .blockNumber.full {
+      margin-bottom: 100px;
+
+      @include tablet {
+        margin-bottom: 80px;
+      }
+
+      @include mobile {
+        margin-bottom: 0;
+        display: none;
+      }
+    }
+
+    .blockTabs.primary {
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .blockServiceLink.primary {
+      margin-bottom: 150px;
+
+      @include tablet {
+        margin-bottom: 130px;
+      }
+    }
+
+    .blockServiceLink.primary {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
