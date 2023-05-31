@@ -1,9 +1,13 @@
 import $ from 'jquery';
 import jQuery from 'jquery';
-import GraphTabsCustom from "../library/tabs";
+import GraphTabs from 'graph-tabs';
 export default function tabsJs() {
 
-  const tabsProfile = new GraphTabsCustom('tabs-primary');
+  const tabsPrimary = document.querySelector('div[data-tabs="tabs-primary"]');
+  if (tabsPrimary) {
+    const tabsProfile = new GraphTabs('tabs-primary');
+  }
+
 
   (function( $ ) {
     $.fn.tabConvert = function(options) {
@@ -66,15 +70,7 @@ export default function tabsJs() {
 
   }( jQuery ));
 
-  // $('.tabsasd').tabConvert({
-  //   activeClass: "selected",
-  // });
-  //
-  // $('.nav-tabs').tabConvert({
-  //   activeClass: "active",
-  //   screenSize: 991,
-  // });
-  //
+
   $('.tabs__nav').tabConvert({
     activeClass: "tabs__nav-btn--active",
     screenSize: 1024,

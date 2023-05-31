@@ -13,7 +13,7 @@
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 70px;
+        //margin-bottom: 70px;
 
         @include tablet {
           padding: 0 15px;
@@ -62,6 +62,7 @@
           line-height: 160%;
           text-transform: uppercase;
           background: var(--white-primary);
+          color: var(--black-primary);
           padding-top: 19px;
           padding-bottom: 20px;
 
@@ -103,7 +104,7 @@
         @include tablet {
           padding: 0 15px;
           position: relative;
-          margin-bottom: 70px;
+          //margin-bottom: 70px;
         }
       }
 
@@ -119,6 +120,7 @@
           display: flex;
           align-items: center;
           z-index: var(--z-index-tabs-dropdown);
+          background: var(--white-primary);
           flex-direction: column;
         }
 
@@ -138,6 +140,8 @@
           color: var(--white-primary);
           background-color: var(--black-primary);
 
+
+
           &:after {
             content: "";
             width: 8px;
@@ -153,6 +157,10 @@
             transition: all 0.4s ease;
           }
         }
+
+        @include mobile {
+          font-size: 14px;
+        }
       }
 
 
@@ -166,7 +174,7 @@
 .blockTabsPanel {
 
   &.home {
-
+    margin-top: 70px;
     .blockTabsPanel {
 
       &__content {
@@ -198,6 +206,7 @@
 
         @include tablet {
           flex-direction: column-reverse;
+          align-items: center;
         }
 
         &--left {

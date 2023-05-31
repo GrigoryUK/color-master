@@ -1,0 +1,25 @@
+.pageCompanyHistory {
+
+  &__panel {
+    padding-top: 100px;
+
+    @include tablet {
+      padding-top: 70px;
+    }
+
+    @include mobile {
+      padding-top: 30px;
+    }
+  }
+
+  .blockTabs.primary {
+
+    .tabs__content {
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+    }
+
+
+  }
+}

@@ -1,5 +1,107 @@
 .blockSlider {
 
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    @include tablet {
+      margin-bottom: 40px;
+      align-items: flex-start;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+
+    .titleC {
+      @include tablet {
+        max-width: 490px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include tablet {
+      gap: 15px;
+    }
+  }
+
+  &__arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    position: relative;
+    transition: all 0.2s ease;
+
+
+
+
+
+    &.arrow-prev {
+      background: var(--black-primary);
+
+      @include hover {
+        background: var(--red-primary);
+      }
+
+      i {
+        left: 52%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    &.arrow-next {
+      background: var(--black-primary);
+
+      i {
+        left: 48%;
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
+
+      @include hover {
+        background: var(--red-primary);
+      }
+    }
+
+    &.swiper-button-disabled {
+      background: var(--white-third);
+
+      @include hover {
+        background: var(--white-third);
+      }
+      cursor: not-allowed;
+
+      i {
+        width: 8px;
+        height: 8px;
+        border: solid var(--black-primary);
+        border-width: 2px 0 0 2px;
+      }
+
+
+    }
+
+    i {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border: solid var(--white-primary);
+      border-width: 2px 0 0 2px;
+      transform: translate(-50%, -50%) rotate(-135deg);
+      position: absolute;
+      top: 50%;
+      transition: all 0.4s ease;
+    }
+  }
+
   &.primary {
 
     .blockSlider {
@@ -8,62 +110,48 @@
 
       }
 
-      &__row {
+
+
+      &__center {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 70px;
-      }
+        justify-content: center;
+        padding-top: 50px;
 
-      &__buttons {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      &__arrow {
-        width: 60px;
-        height: 60px;
-        border-radius: 100px;
-        position: relative;
-
-
-
-        &.arrow-prev {
-          background: #F6F6F6;
-
-          @include hover {
-            background: var(--red-primary);
-          }
-
-          i {
-            transform: translate(-50%, -50%) rotate(-45deg);
-          }
+        @include mobile {
+          padding-top: 30px;
+          flex-direction: column;
+          gap: 15px;
         }
 
-        &.arrow-next {
-          background: var(--black-primary);
+        .buttonC.mobileHome {
+          display: none;
 
-          i {
-            transform: translate(-50%, -50%) rotate(135deg);
-          }
-
-          @include hover {
-            background: var(--red-primary);
+          @include mobile {
+            display: block;
           }
         }
+      }
 
-        i {
-          content: "";
-          width: 8px;
-          height: 8px;
-          border: solid var(--white-primary);
-          border-width: 2px 0 0 2px;
-          transform: translate(-50%, -50%) rotate(-135deg);
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transition: all 0.4s ease;
+      &__button {
+        padding-top: 20px;
+        padding-bottom: 19px;
+        max-width: 293px;
+        width: 100%;
+        border: 1px solid var(--red-primary);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--black-primary);
+
+        @include hover {
+          color: var(--white-primary);
+          background: var(--red-primary);
+        }
+
+        @include mobile {
+          display: none;
         }
       }
     }
@@ -74,9 +162,148 @@
         border-bottom: 1px solid var(--white-third);
         border-top: 1px solid var(--white-third);
         border-right: 1px solid var(--white-third);
-        max-width: 456px;
+        max-width: 449.5px;
         &:first-child {
           border-left: 1px solid var(--white-third);
+
+          @include mobile {
+            border: 1px solid var(--white-third);
+          }
+        }
+
+        @include mobile {
+          border: 1px solid var(--white-third);
+          max-width: 99%;
+        }
+      }
+    }
+  }
+
+
+  &.blockSlider-history {
+
+    .blockSlider {
+
+      &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include tablet {
+          gap: 15px;
+        }
+      }
+
+      &__arrow {
+        width: 50px;
+        height: 50px;
+
+
+
+      }
+
+
+
+    }
+
+    .container--width {
+      @include mobile {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+      }
+    }
+
+    .swiper {
+      padding-bottom: 46px;
+
+      @include mobile {
+        padding-bottom: 36px;
+      }
+    }
+
+    .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+      width: auto;
+      bottom: 0;
+      left: -15px;
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        left: -10px;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+
+      @include mobile {
+        width: 4px;
+        height: 4px;
+      }
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      width: 14px;
+      height: 14px;
+      background: var(--red-primary);
+
+      @include mobile {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 15px);
+
+      @include mobile {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+      }
+    }
+
+    .swiper-slide {
+      background: var(--white-secondary);
+      max-width: 542px;
+      min-height: 412px;
+
+      @include mobile {
+        min-height: 340px;
+      }
+    }
+
+    .itemCom {
+      padding: 40px 38px 70px 40px;
+
+      @include mobile {
+        padding: 20px 22px 40px 22px;
+      }
+
+      h6 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 130%;
+        color: var(--red-primary);
+        margin: 0 0 30px;
+
+        @include mobile {
+          font-size: 28px;
+          line-height: 130%;
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 180%;
+        color: #262626;
+
+        @include mobile {
+          font-size: 14px;
+          line-height: 180%;
         }
       }
     }

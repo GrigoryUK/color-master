@@ -1,39 +1,58 @@
 // страница навигацией по всему сайту
 
 .index__container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-
-
-
-
+.index__title {
+  color: black;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 
 .index__cont {
   display: flex;
+  width: 100%;
+  gap: 1rem;
   @include mobile {
     flex-direction: column;
+    gap: 0;
   }
 }
 
 .index__box {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+
+  width: 100%;
   padding: 20px;
   background-color: #EDE7E1;
   border-radius: 4px;
+  max-width: 700px;
+
+  @include mobile {
+    max-width: 100%;
+  }
+
+  &.not-ready {
+
+  }
 }
 
 
 .btn__index {
-  width: 180px;
-  height: 45px;
+  width: 100%;
+  display: block;
   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 11px;
   text-transform: uppercase;
@@ -51,8 +70,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 20px 0;
+  padding: 1rem 0;
 
+  @include mobile {
+    margin: 1rem 0;
+  }
 
   }
 

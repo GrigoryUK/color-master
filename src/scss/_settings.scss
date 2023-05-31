@@ -117,6 +117,14 @@ input,textarea {
   }
 }
 
+.container--width {
+  padding-left: max(50px, (100% - var(--content-width)) / 2);
+
+  @include tablet {
+    padding-left: max(15px, (100% - var(--content-width)) / 2);
+  }
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }

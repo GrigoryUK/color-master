@@ -43,5 +43,21 @@
         display: none;
       }
     }
+
+    .blockSlider.primary {
+      margin-bottom: 150px;
+
+      @include mobile {
+        margin-bottom: 100px;
+      }
+    }
+
+    .sectionHomeVideo {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+    }
   }
 }

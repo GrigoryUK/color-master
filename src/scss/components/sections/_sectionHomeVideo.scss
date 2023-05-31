@@ -1,0 +1,34 @@
+.sectionHomeVideo {
+
+  &__container {
+    margin-bottom: 70px;
+
+    .titleC {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    display: flex;
+    padding-bottom: 56.25%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__buttons {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+

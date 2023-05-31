@@ -123,6 +123,7 @@
 
 
           .itemCom__image {
+            position: relative;
             width: auto;
             height: auto;
 
@@ -136,6 +137,47 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+          }
+
+          .itemCom__cont__image {
+            position: relative;
+
+            span {
+              display: block;
+              width: 6px;
+              height: 6px;
+              background: var(--red-primary);
+              border-radius: 100%;
+              position: absolute;
+              transition: all 0.2s ease;
+
+              &:nth-child(1) {
+                top: -1rem;
+                left: -1rem;
+              }
+
+              &:nth-child(2) {
+                top: -4rem;
+                left: -1rem;
+              }
+
+              &:nth-child(3) {
+                top: -2rem;
+                left: -1rem;
+              }
+
+              &:nth-child(4) {
+                top: -2rem;
+                left: 2rem;
+              }
+
+              &:nth-child(5) {
+                top: -4rem;
+                left: 4rem;
+              }
+
+
+            }
           }
 
           span {
