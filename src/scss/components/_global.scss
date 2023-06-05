@@ -229,6 +229,21 @@
 
 .textC {
 
+  &.service {
+
+
+    p {
+      margin: 0 0 2em;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 160%;
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+
 
   &.company {
     max-width: 1208px;
@@ -273,6 +288,30 @@
 
 .itemC {
   position: relative;
+
+
+  &.service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      text-transform: uppercase;
+      color: var(--black-primary);
+      @include transitionMain;
+    }
+
+    @include hover {
+
+      span {
+        color: var(--red-primary);
+      }
+    }
+  }
 
 
   &.product {
@@ -718,6 +757,22 @@
 
 .mb-150-primary {
   margin-bottom: 150px;
+
+  @include tablet {
+    margin-bottom: 130px;
+  }
+
+  @include mobile {
+    margin-bottom: 100px;
+  }
+}
+
+.mb-250-primary {
+  margin-bottom: 250px;
+
+  @include big-desktop {
+    margin-bottom: 150px;
+  }
 
   @include tablet {
     margin-bottom: 130px;

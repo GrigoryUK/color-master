@@ -33,12 +33,14 @@ export default function tabsJs() {
 
         container.find('.selected-tab').click(function(){
           tabConvert_toggle();
+          container.toggleClass('active');
         });
 
 
 
         currentItem.find('button').click(function(e){
           const windowWidth = window.innerWidth;
+
           if( settings.screenSize >= windowWidth){
             tabConvert_toggle();
             const selected_text = $(this).text();

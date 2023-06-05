@@ -1,0 +1,11 @@
+.blockBack-primary {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--black-primary);
+  display: inline-block;
+
+  @include hover {
+    color: var(--red-primary);
+  }
+}

@@ -1,0 +1,202 @@
+.pageServiceOrganizations {
+
+  &__panel {
+
+  }
+
+  &__grid {
+
+    .titleC {
+      margin-bottom: 20px;
+      max-width: 774px;
+    }
+
+    .textC {
+      margin-bottom: 50px;
+      max-width: 774px;
+    }
+
+    .gridCom {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 70px;
+
+      @include big-desktop {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 50px;
+      }
+
+      .itemCom {
+        position: relative;
+        background: var(--white-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 336px;
+        transition: all 0.2s ease;
+
+        @include big-desktop {
+          min-height: 330px;
+        }
+
+        @include tablet {
+          min-height: 275px;
+        }
+
+        @include mobile {
+          min-height: 250px;
+        }
+
+        @include hover {
+          background: #EDEDED;
+        }
+
+        img {
+          width: auto;
+          height: auto;
+          max-width: 200px;
+
+          @include tablet {
+            max-width: 156px;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  &__recommendation {
+    margin-bottom: 100px;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+
+    .RecommendationCom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      @include big-desktop {
+        gap: 50px;
+      }
+
+      @include tablet {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 30px;
+      }
+
+      &__left {
+        max-width: 774px;
+        width: 100%;
+
+
+
+        @include big-desktop {
+          max-width: 630px;
+        }
+
+        @include tablet {
+          max-width: 100%;
+        }
+
+        .titleC {
+          margin-bottom: 20px;
+
+          &.desk {
+
+            @include tablet {
+              display: none;
+            }
+          }
+        }
+
+        .textC {
+          margin-bottom: 60px;
+          max-width: 774px;
+        }
+
+        &--col {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 30px;
+
+          @include big-desktop {
+            gap: 20px;
+          }
+
+          @include tablet {
+            gap: 30px;
+          }
+        }
+      }
+
+      &__right {
+        max-width: 902px;
+
+        @include big-desktop {
+          max-width: 662px;
+        }
+
+        @include tablet {
+          max-width: 100%;
+        }
+
+        .titleC.tablet {
+          display: none;
+
+          @include tablet {
+            display: block;
+            margin-bottom: 50px;
+          }
+
+          @include mobile {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &__marketing {
+
+    .titleC {
+      margin-bottom: 20px;
+    }
+
+    .textC {
+      margin-bottom: 50px;
+      max-width: 774px;
+    }
+
+    .MarketingCom {
+
+      &__grid {
+
+      }
+
+      .buttonC {
+        max-width: 370px;
+
+        @include tablet {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+
+}

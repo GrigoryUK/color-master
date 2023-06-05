@@ -216,6 +216,7 @@
 
     .swiper {
       padding-bottom: 46px;
+      overflow: visible;
 
       @include mobile {
         padding-bottom: 36px;
@@ -307,5 +308,75 @@
         }
       }
     }
+  }
+
+  &.blockSlider-organizations {
+    position: relative;
+
+    .blockSlider__buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: var(--z-buttons-swiper-organizations);
+      padding: 0 20px;
+
+      @include mobile {
+        padding: 0 15px;
+      }
+    }
+
+    .blockSlider__arrow {
+      width: 50px;
+      height: 50px;
+
+      background: #F4F4F4;
+
+      i {
+        border: solid var(--black-primary);
+        border-width: 2px 0 0 2px;
+
+        @include mobile {
+          width: 6px;
+          height: 6px;
+          border: solid var(--black-primary);
+          border-width: 1px 0 0 1px;
+        }
+      }
+
+      @include mobile {
+        width: 30px;
+        height: 30px;
+      }
+
+      @include hover {
+        background: var(--black-primary);
+
+        i {
+          border: solid #F4F4F4;
+          border-width: 2px 0 0 2px;
+        }
+      }
+    }
+
+    .swiper-slide {
+
+      img {
+        min-height: 593px;
+
+        @include big-desktop {
+          min-height: 436px;
+        }
+
+        @include mobile {
+          min-height: 227px;
+        }
+      }
+    }
+
   }
 }

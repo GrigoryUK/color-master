@@ -1,0 +1,36 @@
+.pageServiceDesigner {
+
+  &__content {
+    .tabs__content {
+
+      @include mobile {
+        padding: 0 !important;
+      }
+    }
+
+  }
+
+  &__panel {
+
+    .blockServiceText-primary {
+      @include mobile {
+        padding: 0 15px;
+      }
+    }
+
+    .blockNumber {
+      margin-bottom: 70px;
+    }
+
+    .blockServiceGrid-2 {
+      @include mobile {
+        padding: 0 15px;
+      }
+    }
+
+  }
+
+
+
+
+}

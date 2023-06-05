@@ -1,0 +1,59 @@
+.pageServiceBooklets {
+
+  &__panel {
+    margin-top: 42px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+    }
+
+    .blockBack-primary {
+      margin-bottom: 42px;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+
+  &__block {
+
+    .titleC {
+      margin-bottom: 50px;
+
+      @include tablet {
+        margin-bottom: 40px;
+      }
+    }
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 15px;
+      row-gap: 40px;
+
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+      }
+
+      .itemC {
+
+        span {
+          @include tablet {
+            max-width: 316px;
+          }
+        }
+      }
+    }
+  }
+}

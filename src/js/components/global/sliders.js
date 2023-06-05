@@ -5,8 +5,27 @@ export default function slidersJs() {
 
   const swiperHome = document.querySelectorAll('.blockSlider-home');
   const swiperHistory = document.querySelectorAll('.blockSlider-history');
+  const swiperOrganizations = document.querySelectorAll('.blockSlider-organizations');
+
+  if (swiperOrganizations) {
+    swiperOrganizations.forEach(item => {
+      const slider = item.querySelector('.swiper-organizations');
+      const prev = item.querySelector('.arrow-prev');
+      const next = item.querySelector('.arrow-next');
+
+      const swiper = new Swiper(slider, {
+        slidesPerView: 1,
+        loop: true,
+
+        navigation: {
+          nextEl: next,
+          prevEl: prev,
+        },
 
 
+      });
+    })
+  }
   if (swiperHome) {
     swiperHome.forEach(item => {
       const slider = item.querySelector('.swiper-home')

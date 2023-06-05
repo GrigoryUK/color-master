@@ -10,23 +10,19 @@
     @include mobile {
       padding-top: 30px;
     }
+
+    .blockBack-primary {
+      margin-bottom: 42px;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+
   }
 
-  &__back {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--black-primary);
-    display: inline-block;
-    margin-bottom: 42px;
 
-    @include mobile {
-      margin-bottom: 30px;
-    }
-    @include hover {
-      color: var(--red-primary);
-    }
-  }
 
   &__info {
 
