@@ -4,8 +4,14 @@ import GraphTabs from 'graph-tabs';
 export default function tabsJs() {
 
   const tabsPrimary = document.querySelector('div[data-tabs="tabs-primary"]');
+  const tabsSecondary = document.querySelector('div[data-tabs="tabs-mini-buttons"]');
   if (tabsPrimary) {
     const tabsProfile = new GraphTabs('tabs-primary');
+
+  }
+
+  if (tabsSecondary) {
+    const tabsLogoAndPhoto = new GraphTabs('tabs-mini-buttons');
   }
 
 
@@ -73,7 +79,7 @@ export default function tabsJs() {
   }( jQuery ));
 
 
-  $('.tabs__nav').tabConvert({
+  $('.tabs__nav-to-dropdown').tabConvert({
     activeClass: "tabs__nav-btn--active",
     screenSize: 1024,
   });

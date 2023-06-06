@@ -177,6 +177,53 @@
 
     }
   }
+
+  .tabs.tabs-mini-buttons {
+
+    .tabs__nav.tabs-mini-buttons {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 25px;
+      padding: 0;
+
+      @include mobile {
+        gap: 10px;
+      }
+
+      .tabs__nav-item {
+        width: auto;
+        border-radius: 100px;
+        border: 1px solid var(--white-third);
+      }
+
+      .tabs__nav-btn {
+        width: auto;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 160%;
+        padding: 13px 25px;
+        border-radius: 100px;
+        text-transform: none;
+
+        @include mobile {
+          font-size: 13px;
+          padding: 12px 20px 13px;
+        }
+
+        &.tabs__nav-btn--active {
+          background: var(--black-primary);
+          color: var(--white-primary);
+        }
+      }
+    }
+
+    .tabs__content.tabs-mini-buttons {
+      margin-top: 50px;
+      padding: 0;
+    }
+
+  }
 }
 
 

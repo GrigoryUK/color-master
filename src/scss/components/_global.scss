@@ -303,6 +303,10 @@
       text-transform: uppercase;
       color: var(--black-primary);
       @include transitionMain;
+
+      @include tablet {
+        max-width: 316px;
+      }
     }
 
     @include hover {

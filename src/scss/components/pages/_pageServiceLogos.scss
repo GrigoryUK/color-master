@@ -1,0 +1,39 @@
+.pageServiceLogos {
+
+  &__panel {
+    margin-top: 42px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+    }
+    .blockBack-primary {
+      margin-bottom: 42px;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__block {
+
+    .titleC {
+      margin-bottom: 50px;
+
+      @include tablet {
+        margin-bottom: 40px;
+      }
+    }
+
+    &--main {
+
+      .fileC {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
