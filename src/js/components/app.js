@@ -3,6 +3,7 @@ import {feedbackForm} from "./header/feedbackForm";
 import smoothScroll from "./footer/smoothScroll";
 import tabsJs from "./global/tabs";
 import slidersJs from "./global/sliders";
+import filtersJs from "./global/filters";
 
 document.addEventListener('DOMContentLoaded', (event) => {
   headerJs()
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   smoothScroll()
   tabsJs()
   slidersJs()
+  filtersJs()
 });

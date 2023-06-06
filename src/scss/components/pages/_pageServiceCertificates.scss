@@ -1,0 +1,76 @@
+.pageServiceCertificates {
+
+  &__panel {
+    margin-top: 42px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
+
+
+  .titleC {
+    margin-bottom: 50px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__file {
+
+    &--main {
+      margin-bottom: 50px;
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &--left {
+      max-width: 436px;
+      width: 100%;
+
+      @include standard-desktop {
+        max-width: 324px;
+      }
+
+      @include tablet {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__files {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 18px;
+    row-gap: 40px;
+
+    @include big-desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet {
+      row-gap: 30px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+
+  }
+}

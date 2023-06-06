@@ -1,0 +1,10 @@
+.pageServiceBimModels__panel {
+
+  .titleC {
+    margin-bottom: 50px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+}

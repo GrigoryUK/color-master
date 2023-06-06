@@ -23,28 +23,7 @@
     gap: 30px;
   }
 
-  .itemCom {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
 
-    span {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 160%;
-      text-transform: uppercase;
-      color: var(--black-primary);
-      @include transitionMain;
-    }
-
-    @include hover {
-
-      span {
-        color: var(--red-primary);
-      }
-    }
-  }
 }
 
 .blockServiceGrid-2 {
@@ -57,9 +36,7 @@
     gap: 30px;
   }
 
-  .itemCom {
 
-  }
 }
 
 .blockServiceText-primary {

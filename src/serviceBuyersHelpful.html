@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+<div class="site-container">
+  <div id="top" class="visually-hidden"></div>
+  @include('partials/header.html')
+  <div class="container">
+    <div class="breadcrumb__container">
+      <div class="breadcrumbs primary">
+        <span class="first-item"><a href="#">Главная</a></span>
+        <span class="separator">-</span>
+        <span class="0-item"><a href="#">Сервис</a></span>
+        <span class="separator">-</span>
+        <span class="1-item"><a href="#">Покупателям</a></span>
+        <span class="separator">-</span>
+        <span class="last-item">Полезная информация</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title__container--company">
+      <div class="titleC primary">
+        <h1>Сервис</h1>
+      </div>
+    </div>
+  </div>
+  @include('partials/pageServiceHelpfulBuyers.html')
+  @include('partials/footer.html')
+
+</div>
+</body>
+
+</html>
