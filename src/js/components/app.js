@@ -4,6 +4,7 @@ import smoothScroll from "./footer/smoothScroll";
 import tabsJs from "./global/tabs";
 import slidersJs from "./global/sliders";
 import filtersJs from "./global/filters";
+import collapseJs from "./global/collapse";
 
 document.addEventListener('DOMContentLoaded', (event) => {
   headerJs()
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   tabsJs()
   slidersJs()
   filtersJs()
+  collapseJs()
 });

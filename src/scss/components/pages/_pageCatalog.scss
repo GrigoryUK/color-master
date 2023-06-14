@@ -1,0 +1,26 @@
+
+.pageCatalog__block--left {
+
+  .filterC.primary {
+    min-height: 688px;
+
+    @include tablet {
+      min-height: 0;
+    }
+  }
+}
+
+.pageCatalog__block--right {
+
+  .blockGrid {
+    margin-bottom: 100px;
+
+    @include tablet {
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+}

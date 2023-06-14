@@ -1,0 +1,373 @@
+.pageSearch {
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+
+    @include tablet {
+      gap: 0;
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    &--box {
+      min-width: 436px;
+
+      @include big-desktop {
+        max-width: 324px;
+        min-width: 324px;
+      }
+
+      @include tablet {
+        min-width: 0;
+      }
+    }
+
+    &--row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1346px;
+
+      .inputC {
+        width: 100%;
+
+        input {
+          padding: 21px 20px 20px !important;
+          background: var(--white-secondary) !important;
+          width: 100% !important;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 160%;
+          text-transform: uppercase;
+          height: 66px;
+
+          @include mobile {
+            height: 50px;
+            font-size: 14px;
+            padding: 15px 15px 15px !important;
+          }
+
+          &.focus-visible {
+            background: var(--white-third) !important;
+          }
+
+          @include hover {
+            background: var(--white-third) !important;
+          }
+        }
+      }
+
+
+
+      button {
+        max-width: 228px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 66px;
+        font-size: 16px !important;
+
+        @include mobile {
+          max-width: 128px;
+          font-size: 14px !important;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    .blockTabs.primary .tabs .tab-to-dropdown {
+      @include tablet {
+        padding: 0;
+      }
+
+      @include mobile {
+        padding: 0 15px;
+      }
+    }
+
+    .blockTabs.primary .tabs .converted-tab {
+      @include tablet {
+        min-width: 0;
+        max-width: 100%;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      @include mobile {
+       display: block;
+        padding: 0 15px;
+        border: none;
+
+      }
+    }
+
+    .blockTabs {
+      margin: 0 auto;
+      max-width: var(--container-width);
+      padding: 0 var(--container-offset);
+      width: 100%;
+
+      @include tablet {
+        padding: 0 15px;
+      }
+
+      @include mobile {
+        padding: 0;
+      }
+      .tabs {
+        display: flex;
+        gap: 19px;
+
+        @include tablet {
+          flex-direction: column;
+          gap: 0;
+        }
+        &__nav {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          max-width: 436px;
+          min-width: 436px;
+          width: 100%;
+          justify-content: flex-start;
+          min-height: 300px;
+          background: var(--white-secondary);
+          border-radius: 4px;
+          overflow: hidden;
+          margin-top: -65px;
+
+          @include big-desktop {
+            max-width: 324px;
+            min-width: 324px;
+          }
+
+          @include tablet {
+            display: block;
+            overflow: auto;
+            margin-top: 0;
+            border-radius: 0;
+            min-height: 0;
+            border-bottom: 1px solid var(--black-primary);
+            border-left: 1px solid var(--black-primary);
+            border-right: 1px solid var(--black-primary);
+          }
+
+          &-item {
+            border: none;
+
+            &:first-child {
+              border: none;
+
+              @include mobile {
+                border-left: 1px solid var(--black-primary);
+                border-bottom: 1px solid var(--black-primary);
+                border-right: 1px solid var(--black-primary);
+              }
+            }
+
+            @include mobile {
+              border-left: 1px solid var(--black-primary);
+              border-bottom: 1px solid var(--black-primary);
+              border-right: 1px solid var(--black-primary);
+            }
+          }
+
+          &-btn {
+            padding: 21px 20px 20px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            text-align: left;
+            background: var(--white-secondary);
+
+            @include mobile {
+              padding: 22px 15px 21px;
+            }
+
+
+
+            span {
+              display: block;
+
+              @include mobile {
+                font-size: 14px;
+              }
+            }
+
+            .pageSearch__button {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+
+              &--row {
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;
+              }
+
+              &--number {
+
+                &.desk {
+                  @include tablet {
+                    display: none;
+                  }
+                }
+
+                &.tablet {
+                  display: none;
+
+                  @include tablet {
+                    display: block;
+                  }
+                }
+              }
+
+              svg {
+                margin-top: 2px;
+                fill: var(--red-primary);
+              }
+            }
+
+            &--active {
+              background: var(--black-primary);
+              svg {
+                fill: var(--white-primary) !important;
+              }
+
+              span {
+                color: var(--white-primary);
+              }
+            }
+          }
+        }
+
+        &__content {
+          max-width: 1365px;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+
+  &__panel {
+
+    &--result {
+      margin-top: 24px;
+      margin-bottom: 30px;
+
+      @include tablet {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      @include mobile {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding: 0 15px;
+      }
+      span {
+
+        font-size: 16px;
+        line-height: 140%;
+
+        @include mobile {
+          font-size: 14px;
+        }
+        &:first-child {
+          font-weight: 300;
+          margin-right: 0.5em;
+        }
+
+        &:last-child {
+          font-weight: 500;
+        }
+      }
+    }
+
+    &--catalog {
+      @include mobile {
+        padding: 0 15px;
+      }
+    }
+
+
+    &--boxes {
+
+      .itemCom {
+        padding: 20px 85px 50px 21px;
+        background: var(--white-secondary);
+        @include mb(15px);
+
+        @include mobile {
+          padding: 20px 15px 40px 21px;
+        }
+
+        &__title {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 160%;
+          text-transform: uppercase;
+          margin-bottom: 5px;
+
+          @include mobile {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+        }
+
+        &__text {
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 160%;
+          margin-bottom: 30px;
+
+          @include mobile {
+            font-size: 16px;
+          }
+
+          mark {
+            padding: 0 0.2em;
+            background: var(--red-primary);
+            color: var(--white-primary);
+          }
+        }
+        .breadcrumbs {
+          margin: 0 0 20px;
+
+          @include mobile {
+            margin-bottom: 10px;
+          }
+
+          span {
+            font-size: 12px;
+            font-weight: 300;
+          }
+
+          .last-item {
+
+            opacity: 1;
+            cursor: text;
+            color: var(--black-primary);
+          }
+        }
+
+        .buttonC {
+          display: block;
+          max-width: 170px;
+        }
+      }
+    }
+  }
+
+}

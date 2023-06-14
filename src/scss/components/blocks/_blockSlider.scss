@@ -159,22 +159,38 @@
     .swiper-home {
 
       .swiper-slide {
-        border-bottom: 1px solid var(--white-third);
-        border-top: 1px solid var(--white-third);
-        border-right: 1px solid var(--white-third);
-        max-width: 449.5px;
-        &:first-child {
-          border-left: 1px solid var(--white-third);
+
+        //max-width: 449.5px;
+
+        @include standard-desktop {
+          max-width: 440.5px;
+        }
+
+        .itemC.product {
+          border-bottom: 1px solid var(--white-third);
+          border-top: 1px solid var(--white-third);
+          border-right: 1px solid var(--white-third);
 
           @include mobile {
             border: 1px solid var(--white-third);
+            max-width: 99%;
           }
         }
+        &:first-child {
 
-        @include mobile {
-          border: 1px solid var(--white-third);
-          max-width: 99%;
+          .itemC.product {
+            border-left: 1px solid var(--white-third);
+
+            @include mobile {
+              border: 1px solid var(--white-third);
+            }
+          }
+
+
+
         }
+
+
       }
     }
   }

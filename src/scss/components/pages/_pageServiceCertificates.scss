@@ -25,6 +25,7 @@
 
     &--main {
       margin-bottom: 50px;
+      display: inline-block;
 
       @include mobile {
         margin-bottom: 40px;

@@ -1,0 +1,68 @@
+
+.blockGrid {
+
+  &.blockGrid--catalog {
+
+
+    .blockGrid {
+
+      &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--white-third);
+        border-left: 1px solid var(--white-third);
+
+        @include tablet {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .itemC {
+          border-right: 1px solid var(--white-third);
+          border-bottom: 1px solid var(--white-third);
+
+          .itemC__image img {
+            @include big-desktop {
+              max-height: 250px;
+            }
+
+            @include tablet {
+              max-height: 400px;
+            }
+
+            @include small-tablet {
+              max-height: 250px;
+            }
+          }
+
+          .itemC__row {
+            padding: 24px 15px 16px;
+            @include mobile {
+              padding: 30px 15px 16px;
+            }
+          }
+
+          .itemC__button--price {
+            @include big-desktop {
+              font-size: 12px;
+            }
+          }
+
+          @include hover {
+
+            @include big-desktop {
+              .itemC__image img {
+                transform: scale(0.6, 0.6);
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}

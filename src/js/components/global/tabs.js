@@ -1,18 +1,53 @@
-import $ from 'jquery';
-import jQuery from 'jquery';
-import GraphTabs from 'graph-tabs';
+import GraphTabs from 'graph-tabs'
+import { default as $, default as jQuery } from 'jquery'
 export default function tabsJs() {
 
-  const tabsPrimary = document.querySelector('div[data-tabs="tabs-primary"]');
-  const tabsSecondary = document.querySelector('div[data-tabs="tabs-mini-buttons"]');
-  if (tabsPrimary) {
-    const tabsProfile = new GraphTabs('tabs-primary');
+  (function GraphTab() {
+    const tabsPrimary = document.querySelector('div[data-tabs="tabs-primary"]');
+    const tabsSecondary = document.querySelector('div[data-tabs="tabs-mini-buttons"]');
+    if (tabsPrimary) {
+      const tabsProfile = new GraphTabs('tabs-primary');
 
-  }
+    }
+    if (tabsSecondary) {
+      const tabsLogoAndPhoto = new GraphTabs('tabs-mini-buttons');
+    }
+  })();
 
-  if (tabsSecondary) {
-    const tabsLogoAndPhoto = new GraphTabs('tabs-mini-buttons');
-  }
+
+  (function toggleTabsContact(){
+    const container = $('.pageContact__panel--container--one');
+    if (container) {
+      const buttons = container.find('.pageContact__button');
+      const buttonOne = container.find('.pageContact__button--1');
+      const buttonTwo = container.find('.pageContact__button--2');
+      const blocksInfoOne = container.find('.pageContact__info--1');
+      const blocksInfoTwo = container.find('.pageContact__info--2');
+      const blocksMapOne = container.find('.pageContact__map--1');
+      const blocksMapTwo = container.find('.pageContact__map--2');
+
+      buttonOne.on('click', function () {
+        buttons.removeClass('pageContact__button--active');
+        $(this).addClass('pageContact__button--active');
+        blocksInfoTwo.removeClass('pageContact__info--active')
+        blocksMapTwo.removeClass('pageContact__map--active')
+        blocksInfoOne.addClass('pageContact__info--active')
+        blocksMapOne.addClass('pageContact__map--active')
+
+
+      })
+
+      buttonTwo.on('click', function () {
+        buttons.removeClass('pageContact__button--active');
+        $(this).addClass('pageContact__button--active');
+        blocksInfoOne.removeClass('pageContact__info--active')
+        blocksMapOne.removeClass('pageContact__map--active')
+        blocksInfoTwo.addClass('pageContact__info--active')
+        blocksMapTwo.addClass('pageContact__map--active')
+
+      })
+    }
+  })();
 
 
   (function( $ ) {
@@ -20,7 +55,7 @@ export default function tabsJs() {
 
       const settings = $.extend({
         activeClass: "active",
-        screenSize: 767,
+        screenSize: 1024,
       }, options );
 
       return this.each(function(i) {
@@ -41,6 +76,10 @@ export default function tabsJs() {
           tabConvert_toggle();
           container.toggleClass('active');
         });
+
+        container.find('.converted-tab').click(function () {
+          container.toggleClass('active');
+        })
 
 
 
@@ -67,9 +106,9 @@ export default function tabsJs() {
         }
         resize_function();
 
-        $(window).resize(function(){
-          resize_function();
-        });
+        // $(window).resize(function(){
+        //   resize_function();
+        // });
 
       });
     };

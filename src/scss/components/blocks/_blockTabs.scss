@@ -37,14 +37,18 @@
             border-left: 1px solid var(--white-third);
 
             @include tablet {
-              border: none;
-
+              //border: none;
+              border-bottom: 1px solid var(--black-primary);
+              border-left: 1px solid var(--black-primary);
+              border-right: 1px solid var(--black-primary);
             }
           }
 
           @include tablet {
             border: none;
-
+            border-bottom: 1px solid var(--black-primary);
+            border-left: 1px solid var(--black-primary);
+            border-right: 1px solid var(--black-primary);
           }
 
 
@@ -66,6 +70,10 @@
           padding-top: 19px;
           padding-bottom: 20px;
 
+          @include mobile {
+            font-size: 14px;
+          }
+
 
 
           &--active {
@@ -73,8 +81,8 @@
             color: var(--white-primary);
 
             @include tablet {
-              background: var(--white-third);
-              color: var(--black-primary);
+              background: var(--black-primary);
+              color: var(--white-primary);
             }
           }
 
@@ -96,6 +104,14 @@
         max-width: var(--container-width);
         @include tablet {
           padding: 0 15px;
+        }
+      }
+
+      &__panel {
+        animation: anime 1s;
+        @keyframes anime {
+          from{opacity: 0}
+          to{opacity: 1}
         }
       }
 
@@ -125,7 +141,7 @@
 
         @include tablet {
           position: absolute;
-          top: 100%;
+          top: 99%;
           left: -15px;
           width: 100%;
           margin: 0 15px;

@@ -6,6 +6,7 @@ export default function slidersJs() {
   const swiperHome = document.querySelectorAll('.blockSlider-home');
   const swiperHistory = document.querySelectorAll('.blockSlider-history');
   const swiperOrganizations = document.querySelectorAll('.blockSlider-organizations');
+  const swiperCompare = document.querySelectorAll('.blockSlider-compare');
 
   if (swiperOrganizations) {
     swiperOrganizations.forEach(item => {
@@ -55,6 +56,54 @@ export default function slidersJs() {
 
           1025: {
             slidesPerView: 'auto',
+          },
+
+          1441: {
+            slidesPerView: 4,
+          }
+        }
+      });
+    })
+  }
+
+  if (swiperCompare) {
+    swiperCompare.forEach(item => {
+      const slider = item.querySelector('.swiper-compare')
+      const prev = item.querySelector('.arrow-prev');
+      const next = item.querySelector('.arrow-next');
+
+      const swiper = new Swiper(slider, {
+        navigation: {
+          nextEl: next,
+          prevEl: prev,
+        },
+
+        breakpoints: {
+
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+
+          900: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+
+          1025: {
+
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+
+          1441: {
+            slidesPerView: 4,
+            spaceBetween: 15,
           }
         }
       });
