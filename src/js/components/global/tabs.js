@@ -5,12 +5,16 @@ export default function tabsJs() {
   (function GraphTab() {
     const tabsPrimary = document.querySelector('div[data-tabs="tabs-primary"]');
     const tabsSecondary = document.querySelector('div[data-tabs="tabs-mini-buttons"]');
+    const tabsCalc = document.querySelector('div[data-tabs="tabs-calc"]');
     if (tabsPrimary) {
       const tabsProfile = new GraphTabs('tabs-primary');
 
     }
     if (tabsSecondary) {
       const tabsLogoAndPhoto = new GraphTabs('tabs-mini-buttons');
+    }
+    if (tabsCalc) {
+      const tabsCalc = new GraphTabs('tabs-calc');
     }
   })();
 

@@ -1,0 +1,351 @@
+.blockCalc {
+
+  &__container {
+
+    .inputC {
+
+      input {
+        @include tablet {
+          padding: 14px 15px;
+        }
+      }
+    }
+
+    &--buttons {
+      position: relative;
+      margin-top: 30px;
+
+      button {
+        max-width: 226px;
+
+        @include mobile {
+          max-width: 100%;
+        }
+      }
+
+      &--warning {
+        color: var(--red-primary);
+        opacity: 0.9;
+        position: absolute;
+        left: 0;
+        bottom: -45px;
+        display: none;
+      }
+    }
+  }
+
+  &__dropdown {
+
+    &--input {
+      position: relative;
+      margin-bottom: 20px;
+
+      &::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border: solid #303E47;
+        border-width: 1px 0 0 1px;
+        transform: translate(0, 0%) rotate(-135deg);
+        position: absolute;
+        right: 23px;
+        top: 21px;
+        transition: all 0.4s ease;
+
+        @include tablet {
+          right: 15px;
+          top: 20px;
+        }
+      }
+
+
+      input {
+        cursor: pointer;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #303E47;
+        position: relative;
+        background: var(--white-secondary);
+        padding: 14px 20px;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+          color: #303E47;
+          opacity: 1;
+        }
+
+        @include tablet {
+          padding: 14px 15px;
+        }
+
+        @include mobile {
+          font-size: 14px;
+          padding-right: 40px;
+        }
+
+        &:not(.open) {
+
+          @include hover {
+
+            background: var(--white-secondary-hover);
+
+          }
+        }
+
+
+      }
+
+      &.open {
+        input {
+          background: var(--white-third);
+        }
+
+        &::after {
+          top: 23px;
+          transform: translate(0, 0) rotate(-315deg);
+        }
+      }
+
+
+    }
+
+
+    &--menu {
+      position: absolute;
+      z-index: var(--z-index-option);
+      width: 100%;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+      display: none;
+
+      .simplebar-track {
+        right: 23px;
+        background: #D9D9D9;
+        border-radius: 2px;
+        width: 2px;
+        margin-top: 14px;
+        margin-bottom: 14px;
+
+        @include tablet {
+          right: 17px;
+        }
+
+        @include mobile {
+          right: 30px;
+        }
+      }
+
+      .simplebar-scrollbar {
+        background: var(--black-primary);
+        border-radius: 2px;
+      }
+
+      @include mobile {
+        max-height: 405px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        left: -15px;
+        width: calc(100% + 30px);
+      }
+
+
+    }
+  }
+
+
+  &__container {
+
+    .labelCom {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      color: #303E47;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__result {
+    margin-top: 30px;
+    color: #303E47;
+    display: none;
+
+    @include mobile {
+      margin-top: 20px;
+    }
+
+    &--warning {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--red-primary);
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+    }
+
+    &--info {
+
+      &--title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: var(--black-primary);
+        padding-bottom: 30px;
+        padding-top: 38px;
+        border-bottom: 1px solid var(--white-third);
+
+        @include mobile {
+          padding-top: 30px;
+          padding-bottom: 20px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  &__answer {
+    padding-top: 42px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 30px;
+    }
+
+
+    a {
+      display: block;
+      max-width: 551px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      text-decoration-line: underline;
+      color: #303E47;
+
+      @include hover {
+        color: var(--red-primary);
+      }
+    }
+
+    &--column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 16px;
+
+      @include tablet {
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      @include mobile {
+        gap: 10px;
+      }
+    }
+
+    &--numbers {
+      display: flex;
+      align-items: flex-end;
+
+      @include tablet {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      @include mobile {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      span {
+        display: block;
+        text-align: right;
+
+        &:first-child {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 160%;
+          margin-right: 30px;
+
+          @include mobile {
+            font-size: 14px;
+            margin-right: 0;
+          }
+        }
+
+        &:last-child {
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 1;
+          color: var(--red-primary);
+          min-width: 140px;
+
+          @include mobile {
+            line-height: 160%;
+            min-width: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.blockCalc--service {
+    max-width: 1208px;
+    margin: 0 auto;
+
+    .titleC {
+      margin-bottom: 50px;
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+
+    .blockCalc__dropdown--input {
+      //@include mobile {
+      //  margin: 0 15px;
+      //}
+    }
+
+    .blockCalc {
+
+      &__container {
+
+      }
+
+
+
+      &__cont {
+        @include mb(20px);
+
+        &--row {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          width: 100%;
+
+          @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+          }
+
+          .inputC {
+            width: 100%;
+          }
+        }
+      }
+
+
+    }
+  }
+}

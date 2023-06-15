@@ -5,6 +5,7 @@ import tabsJs from "./global/tabs";
 import slidersJs from "./global/sliders";
 import filtersJs from "./global/filters";
 import collapseJs from "./global/collapse";
+import calculatorJs from "./global/calculator";
 
 document.addEventListener('DOMContentLoaded', (event) => {
   headerJs()
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   slidersJs()
   filtersJs()
   collapseJs()
+  calculatorJs()
 });
