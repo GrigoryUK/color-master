@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+<div class="site-container">
+  <div id="top" class="visually-hidden"></div>
+  @include('partials/header.html')
+  <div class="container">
+    <div class="breadcrumb__container">
+      <div class="breadcrumbs primary card">
+        <span class="first-item"><a href="#">Главная</a></span>
+        <span class="separator">-</span>
+        <span class="0-item"><a href="#">Каталог</a></span>
+        <span class="separator">-</span>
+        <span class="last-item">Краска для бетонных полов Aquastrong</span>
+      </div>
+    </div>
+  </div>
+  @include('partials/pageCard.html')
+  @include('partials/footer.html')
+
+</div>
+</body>
+
+</html>

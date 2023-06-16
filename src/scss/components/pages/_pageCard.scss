@@ -1,0 +1,455 @@
+.pageCard {
+
+  &__content {
+
+    .sectionHero {
+      margin-bottom: 70px;
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+
+      .container {
+        @include mobile {
+          padding: 0;
+        }
+      }
+
+      .button--compare {
+
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        background: #F9F9F9;
+        border-radius: 100px;
+        max-height: 50px;
+        min-height: 50px;
+        max-width: 50px;
+        min-width: 50px;
+
+        @include mobile {
+          max-height: 40px;
+          min-height: 40px;
+          max-width: 40px;
+          min-width: 40px;
+        }
+
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 20px;
+          height: 19px;
+          fill: #292D32;
+        }
+
+        @include hover {
+          background: var(--red-primary);
+
+          svg {
+            fill: var(--white-primary);
+          }
+        }
+
+
+        &.desk {
+
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+
+      &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 46px;
+
+        @include big-desktop {
+          gap: 50px;
+        }
+
+        @include tablet {
+          flex-direction: column;
+          gap: 35px;
+        }
+
+        @include mobile {
+          gap: 20px;
+        }
+      }
+
+      &__left {
+        position: relative;
+        max-width: 720px;
+        width: 100%;
+
+        @include tablet {
+          max-width: 100%;
+        }
+
+        &--row {
+          display: none;
+
+          @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 15px;
+            position: absolute;
+            max-width: 738px;
+            width: 100%;
+            top: 15px;
+            z-index: 3;
+
+          }
+
+          @include mobile {
+            top: 5px;
+          }
+        }
+
+        .blockTest {
+
+          height: 672px;
+          background: red;
+
+          @include big-desktop {
+            height: 477px;
+          }
+        }
+
+        .blockLink {
+          margin-top: 40px;
+
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+
+      &__right {
+
+        .blockInfo {
+
+          &.blockInfo--card {
+
+            @include mobile {
+              padding: 0 15px;
+            }
+
+            .mini-span {
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 160%;
+              margin-bottom: 10px;
+              display: block;
+            }
+
+            .blockInfo {
+
+              &__hero {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 30px;
+
+                @include tablet {
+                  flex-direction: column;
+                  align-items: flex-start;
+                }
+
+                &--compare {
+
+
+                  @include tablet {
+                    display: none;
+                  }
+                }
+
+                &--title {
+                  font-weight: 500;
+                  font-size: 28px;
+                  line-height: 160%;
+                  text-transform: uppercase;
+
+                  @include small-tablet {
+                    max-width: 568px;
+                  }
+
+                  @include mobile {
+                    font-size: 22px;
+                  }
+                }
+              }
+
+              &__done {
+                display: flex;
+                align-items: flex-start;
+                padding-bottom: 30px;
+                margin-bottom: 16px;
+                border-bottom: 1px solid var(--white-third);
+                gap: 50px;
+
+                @include big-desktop {
+                  padding-bottom: 15px;
+                }
+
+                @include small-tablet {
+                  flex-wrap: wrap;
+                }
+
+                @include mobile {
+                  flex-direction: column;
+                  gap: 15px;
+                }
+
+                &--block {
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 10px;
+
+                  span {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 140%;
+                    margin-top: 1px;
+
+                    @include big-desktop {
+                      max-width: 124px;
+                    }
+
+                    @include mobile {
+                      max-width: 100%;
+                    }
+                  }
+                }
+              }
+
+              &__text {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 160%;
+                margin-bottom: 15px;
+
+                @include mobile {
+                  margin-bottom: 30px;
+                }
+
+                @include tablet {
+                  font-size: 16px;
+                }
+
+                p {
+                  margin: 0;
+                  @include mb(1em);
+                }
+              }
+
+              &__main {
+
+
+                &--cont {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-bottom: 40px;
+
+                  @include min-desktop {
+                    gap: 30px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                  }
+
+                  @include tablet {
+                    margin-bottom: 30px;
+                  }
+                }
+              }
+
+              &__weight {
+
+                &--buttons {
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  justify-content: space-between;
+
+                  .button--weight {
+                    background: var(--white-secondary);
+                    border-radius: 100px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 160%;
+                    padding: 12px 25px;
+                    border: none;
+                    color: #000000;
+
+                    span {
+                      opacity: 0.5;
+                    }
+                  }
+                }
+              }
+
+              &__buttons {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+
+                @include small-tablet {
+                  width: 100%;
+                }
+
+                @include mobile {
+                  flex-direction: column;
+                  align-items: flex-start;
+                }
+
+                .buttonC--calc {
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 160%;
+                  text-align: center;
+                  text-transform: uppercase;
+                  color: var(--white-primary);
+                  padding: 14px 18px;
+                  background: var(--red-primary);
+
+                  @include small-tablet {
+                    width: 100%;
+                  }
+
+                  @include hover {
+                    background: var(--red-primary-hover);
+                  }
+                }
+
+                .buttonC--config {
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 160%;
+                  text-align: center;
+                  text-transform: uppercase;
+                  color: var(--black-primary);
+                  padding: 13px 20px;
+                  border: 1px solid var(--black-primary);
+
+                  @include small-tablet {
+                    width: 100%;
+                  }
+
+                  @include hover {
+                    background: var(--white-third);
+                    border: 1px solid var(--white-third);
+                  }
+                }
+              }
+
+              &__warning {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-bottom: 30px;
+
+                @include min-desktop {
+                  flex-wrap: wrap;
+                }
+
+                @include tablet {
+                  flex-wrap: nowrap;
+                }
+
+                @include small-tablet {
+                  overflow-x: auto;
+                  padding-bottom: 10px;
+                  margin-bottom: 20px;
+                }
+
+                img {
+                  max-width: 111px;
+                  max-height: 70px;
+
+                  @include min-desktop {
+                    flex-shrink: 0;
+                  }
+
+                  @include mobile {
+                    max-width: 105px;
+                  }
+                }
+              }
+
+              &__check {
+                margin-bottom: 22px;
+
+                @include tablet {
+                  margin-bottom: 20px;
+                }
+
+                .mini-span {
+                  margin: 0;
+                }
+
+                .check-span {
+                  font-weight: 300;
+                  font-size: 18px;
+                  line-height: 160%;
+                  display: block;
+
+                  @include mobile {
+                    font-size: 16px;
+                    max-width: 280px;
+                  }
+                }
+              }
+
+              &__links {
+
+                .mini-span {
+                  margin-bottom: 15px;
+                }
+
+                &--row {
+                  display: flex;
+                  align-items: center;
+                  gap: 15px;
+
+                  @include tablet {
+                    overflow-x: auto;
+                    padding-bottom: 10px;
+                  }
+
+                  a {
+                    display: block;
+                    max-width: 150px;
+                    max-height: 70px;
+                    flex-shrink: 0;
+
+                    @include mobile {
+                        max-width: 105px;
+                        max-height: 50px;
+                    }
+                  }
+
+
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
+
+    .sectionRecommendationSlider {
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}

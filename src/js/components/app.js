@@ -6,6 +6,8 @@ import slidersJs from "./global/sliders";
 import filtersJs from "./global/filters";
 import collapseJs from "./global/collapse";
 import calculatorJs from "./global/calculator";
+import cardJs from "./global/card";
+import sliderCardJs from "./global/sliderCard";
 
 document.addEventListener('DOMContentLoaded', (event) => {
   headerJs()
@@ -16,4 +18,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   filtersJs()
   collapseJs()
   calculatorJs()
+  cardJs()
+  sliderCardJs()
 });

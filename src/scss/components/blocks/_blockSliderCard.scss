@@ -1,0 +1,219 @@
+.blockSliderCard {
+  border-right: 1px solid #EAEBEC;
+  border-left: 1px solid #EAEBEC;
+  border-top: 1px solid #EAEBEC;
+
+  @include mobile {
+    border: none;
+  }
+
+  @include big-desktop {
+    max-width: 450px;
+  }
+
+  @include tablet {
+    max-width: 716px;
+  }
+
+  &--big {
+    position: relative;
+
+    @include mobile {
+      padding-top: 20px;
+    }
+
+    .blockSlider__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #F4F4F4;
+      z-index: 3;
+
+      @include mobile {
+        display: none;
+      }
+
+
+      &.arrow-prev {
+        left: 13px;
+      }
+
+      &.arrow-next {
+        right: 13px;
+      }
+
+      i {
+        border: solid var(--black-primary);
+        border-width: 2px 0 0 2px;
+      }
+
+      &:not(.swiper-button-disabled) {
+        @include hover {
+          background: var(--black-primary);
+          i {
+            border: solid var(--white-primary);
+            border-width: 2px 0 0 2px;
+          }
+        }
+      }
+
+
+    }
+
+
+  }
+
+  &--small {
+    border-top: 1px solid #EAEBEC;
+    border-bottom: 1px solid #EAEBEC;
+
+    &--container {
+      display: flex;
+      align-items: center;
+    }
+
+    .slider-card-small {
+
+    }
+
+    .swiper-slide {
+      position: relative;
+      width: 100%;
+      max-width: 111px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #EAEBEC;
+
+      .slider__fon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--white-third);
+        opacity: 0;
+      }
+
+      &.swiper-slide-thumb-active {
+
+        .slider__fon {
+          opacity: 0.3;
+        }
+      }
+
+      @include big-desktop {
+        max-width: 96px;
+      }
+
+
+      @include tablet {
+        max-width: 110px;
+      }
+
+      @include mobile {
+        max-width: 75px;
+      }
+
+      img {
+        max-width: 96px;
+
+        @include mobile {
+          max-width: 68px;
+        }
+      }
+    }
+
+    .arrow-btn {
+      position: relative;
+      max-width: 80px;
+      min-width: 80px;
+      max-height: 77px;
+      min-height: 77px;
+      background: var(--white-primary);
+      z-index: 3;
+
+      @include big-desktop {
+        max-width: 79px;
+        min-width: 79px;
+        max-height: 77px;
+        min-height: 77px;
+      }
+
+      @include tablet {
+        max-width: 80px;
+        min-width: 80px;
+        max-height: 77px;
+        min-height: 77px;
+      }
+
+      @include mobile {
+        max-width: 36px;
+        min-width: 36px;
+        max-height: 54px;
+        min-height: 54px;
+      }
+
+      i {
+        @include mobile {
+          opacity: 0.7;
+        }
+      }
+
+      @include hover {
+        background: var(--white-secondary);
+      }
+
+      &.arrow-prev {
+        position: relative;
+        border-right: 1px solid #EAEBEC;
+
+        i {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border: solid var(--black-primary);
+          border-width: 2px 0 0 2px;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          position: absolute;
+          top: 50%;
+          transition: all 0.4s ease;
+        }
+
+        //&::after {
+        //  position: absolute;
+        //  height: 100%;
+        //  background: var(--white-primary);
+        //  width: 7px;
+        //  right: -8px;
+        //  top: 0;
+        //  @include big-desktop {
+        //    @include pseudo;
+        //
+        //  }
+        //
+        //  @include tablet {
+        //    display: none;
+        //  }
+        //}
+
+      }
+
+      &.arrow-next {
+        border-left: 1px solid #EAEBEC;
+
+        i {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border: solid var(--black-primary);
+          border-width: 2px 0 0 2px;
+          transform: translate(-50%, -50%) rotate(135deg);
+          position: absolute;
+          top: 50%;
+          transition: all 0.4s ease;
+        }
+      }
+    }
+
+
+  }
+}

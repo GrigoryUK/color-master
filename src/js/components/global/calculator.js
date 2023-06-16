@@ -5,7 +5,10 @@ export default function calculatorJs() {
 
   (function maskNumber() {
     let code = document.querySelectorAll('input[type="num"]');
-    let codeMask = new Inputmask("9{*}");
+    let codeMask = new Inputmask({
+      mask: "9{*}[000]",
+      placeholder: "000"
+    });
     codeMask.mask(code);
   })();
 

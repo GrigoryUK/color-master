@@ -1,11 +1,16 @@
 import GraphTabs from 'graph-tabs'
 import { default as $, default as jQuery } from 'jquery'
+import {isDesktop} from "../../functions/check-viewport";
+import GraphTabsCustom from "../helpers/tabsCastom";
 export default function tabsJs() {
 
   (function GraphTab() {
     const tabsPrimary = document.querySelector('div[data-tabs="tabs-primary"]');
     const tabsSecondary = document.querySelector('div[data-tabs="tabs-mini-buttons"]');
     const tabsCalc = document.querySelector('div[data-tabs="tabs-calc"]');
+    const tabsCalcCard = document.querySelector('div[data-tabs="tabs-calc-card"]');
+    const tabsCard = document.querySelector('div[data-tabs="tabs-card"]');
+    const tabsCardChoice = document.querySelector('div[data-tabs="tabs-choice"]');
     if (tabsPrimary) {
       const tabsProfile = new GraphTabs('tabs-primary');
 
@@ -15,6 +20,19 @@ export default function tabsJs() {
     }
     if (tabsCalc) {
       const tabsCalc = new GraphTabs('tabs-calc');
+    }
+    if (tabsCalcCard) {
+      const tabsCalcCard = new GraphTabsCustom('tabs-calc-card', '.tabs__nav--calc', '.tabs__nav-btn--calc', '.tabs__panel--calc');
+    }
+    if (tabsCard) {
+      if (isDesktop()) {
+        const tabsCard = new GraphTabsCustom('tabs-card', '.tabs__nav--card', '.tabs__nav-btn--card', '.tabs__panel--card');
+      }
+    }
+    if (tabsCardChoice) {
+      if (isDesktop()) {
+        const tabsCardChoice = new GraphTabsCustom('tabs-choice', '.tabs__nav--choice', '.tabs__nav-btn--choice', '.tabs__panel--choice');
+      }
     }
   })();
 

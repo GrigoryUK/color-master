@@ -734,6 +734,14 @@
     }
   }
 
+  &.card {
+    margin-bottom: 20px;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
 }
 
 .title__container--company {
@@ -767,6 +775,10 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @include mobile {
+      align-items: flex-start;
+    }
 
     svg {
       min-width: 39px;

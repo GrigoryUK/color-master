@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    @include big-desktop {
+    @include tablet {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -16,7 +16,7 @@
       transition: all 0.2s ease;
 
 
-      @include big-desktop {
+      @include tablet {
         padding-left: 40px;
         padding-top: 55px;
         padding-bottom: 70px;
