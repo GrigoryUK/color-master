@@ -362,6 +362,17 @@
     }
   }
 
+  &.blockCalc--card {
+
+    .blockCalc__result {
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+
+
+
   .tabs--calc {
     display: flex;
     max-height: 330px;
