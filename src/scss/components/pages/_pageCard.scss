@@ -102,11 +102,13 @@
             width: 100%;
             top: 15px;
             z-index: 3;
+            left: -22px;
 
           }
 
           @include mobile {
             top: 5px;
+            left: 0;
           }
         }
 
@@ -198,6 +200,7 @@
 
                 @include small-tablet {
                   flex-wrap: wrap;
+                  gap: 32px;
                 }
 
                 @include mobile {

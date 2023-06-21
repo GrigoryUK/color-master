@@ -13,6 +13,11 @@
   &__panel {
 
     &--video {
+      padding-left: 1px;
+
+      @include tablet {
+        padding-left: 0;
+      }
       @include mobile {
         padding: 0 15px;
       }

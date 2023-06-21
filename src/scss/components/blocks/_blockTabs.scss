@@ -4,7 +4,7 @@
 
     .tabs {
 
-      &__nav {
+      &__nav--primary {
         margin: 0 auto;
         padding: 0 var(--container-offset);
         max-width: var(--container-width);
@@ -18,15 +18,17 @@
         @include tablet {
           padding: 0 15px;
           margin-bottom: 50px;
+          display: block;
+          display: none;
         }
 
         @include mobile {
           margin-bottom: 30px;
+
         }
 
-
-
-        &-item {
+        .tabs__nav-item--primary {
+          display: block;
           text-align: center;
           width: 100%;
           border-top: 1px solid var(--white-third);
@@ -50,12 +52,9 @@
             border-left: 1px solid var(--black-primary);
             border-right: 1px solid var(--black-primary);
           }
-
-
-
         }
 
-        &-btn {
+        .tabs__nav-btn--primary {
           width: 100%;
           background: none;
           cursor: pointer;
@@ -69,20 +68,19 @@
           color: var(--black-primary);
           padding-top: 19px;
           padding-bottom: 20px;
+          display: block;
 
           @include mobile {
             font-size: 14px;
           }
 
-
-
-          &--active {
+          &.tabs__nav-btn--active {
             background: var(--black-primary);
             color: var(--white-primary);
 
             @include tablet {
-              background: var(--black-primary);
-              color: var(--white-primary);
+              background: var(--white-third);
+              color: var(--black-primary);
             }
           }
 
@@ -91,6 +89,27 @@
               background: var(--white-third);
             }
           }
+        }
+
+
+
+        &-item {
+
+
+
+
+        }
+
+        &-btn {
+          cursor: pointer;
+
+
+
+          &--active {
+
+          }
+
+
 
 
         }
@@ -98,7 +117,7 @@
 
       }
 
-      &__content {
+      &__content--primary {
         margin: 0 auto;
         padding: 0 var(--container-offset);
         max-width: var(--container-width);
@@ -107,7 +126,7 @@
         }
       }
 
-      &__panel {
+      &__panel--primary {
         animation: anime 1s;
         @keyframes anime {
           from{opacity: 0}
@@ -133,6 +152,7 @@
         @include tablet {
           padding: 0 15px;
           position: relative;
+          z-index: var(--z-index-tabs-dropdown);
           //margin-bottom: 70px;
         }
       }
@@ -141,16 +161,13 @@
 
         @include tablet {
           position: absolute;
-          top: 99%;
+          top: 100%;
           left: -15px;
           width: 100%;
           margin: 0 15px;
           padding: 0 15px;
-          display: flex;
-          align-items: center;
           z-index: var(--z-index-tabs-dropdown);
           background: var(--white-primary);
-          flex-direction: column;
         }
 
       }
@@ -221,6 +238,13 @@
         padding: 13px 25px;
         border-radius: 100px;
         text-transform: none;
+        border: none;
+
+        &:not(.tabs__nav-btn--active) {
+          @include hover {
+            background: var(--white-third);
+          }
+        }
 
         @include mobile {
           font-size: 13px;
@@ -297,12 +321,20 @@
 
           @include tablet {
             transform: translate(-18%, 0px);
+          }
 
+          @include small-tablet {
+            transform: none;
+            width: 100%;
           }
           .image {
             border-radius: 100%;
             max-width: 635px;
             max-height: 635px;
+
+            @include tablet {
+              max-width: 530px;
+            }
           }
 
           .image-1 {

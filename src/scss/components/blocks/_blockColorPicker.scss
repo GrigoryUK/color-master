@@ -1,0 +1,262 @@
+
+.blockColorPicker {
+
+  .titleC {
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__picture {
+
+    &--cont {
+      width: 100%;
+      height: 580px;
+      max-width: 1040px;
+
+      cursor: pointer;
+
+      @include mobile {
+        height: 270px;
+      }
+    }
+
+    background: #D9D9D9;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  &__slider {
+    max-width: 730px;
+
+    @include big-desktop {
+      max-width: 520px;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+
+    .swiper-horizontal > .swiper-scrollbar {
+      background: #EAEBEC;
+      max-width: 652px;
+
+
+
+      @include big-desktop {
+        max-width: 442px;
+      }
+
+      @include tablet {
+        max-width: 100%;
+      }
+    }
+
+    .swiper-slide {
+      max-width: 100px;
+    }
+
+    .swiper-scrollbar {
+      left: 0;
+      bottom: 0;
+      position: relative;
+      width: 100%;
+      height: 5px;
+      margin: 0 15px;
+    }
+
+    .swiper-scrollbar-drag {
+      background: var(--red-primary);
+      cursor: pointer;
+
+      @include hover {
+        background: var(--red-primary-hover);
+      }
+    }
+
+    .slider__bottom {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      .arrowC {
+        max-width: 24px;
+        min-width: 24px;
+        max-height: 24px;
+        min-height: 24px;
+        border-radius: 100px;
+        background: var(--red-primary);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        position: relative;
+
+
+        @include hover {
+          background: var(--red-primary-hover);
+        }
+
+        i {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border: solid var(--white-primary);
+          border-width: 2px 0 0 2px;
+          transform: translate(-50%, -50%) rotate(-135deg);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transition: all 0.4s ease;
+        }
+
+        &.arrow-prev {
+
+          i {
+            left: 54%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+
+        &.arrow-next {
+
+          i {
+            left: 46%;
+            transform: translate(-50%, -50%) rotate(135deg);
+          }
+
+        }
+      }
+    }
+
+
+
+    .blockColors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      flex-direction: column;
+      max-width: 100px;
+
+      .item--color {
+        width: 100px;
+        height: 100px;
+        background: #FFFFFF;
+        cursor: pointer;
+        padding: 3px;
+        position: relative;
+        box-sizing: border-box;
+        transition: all 0.2s ease;
+        border: 3px solid transparent;
+
+        i {
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          background: var(--black-primary);
+          border-radius: 100px;
+          bottom: 10px;
+          right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.2s ease;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 8px;
+            border: solid #ffffff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            margin-top: -2px;
+          }
+        }
+
+        &.active {
+          border: 3px solid #424A52;
+
+          i {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+      }
+    }
+
+
+  }
+
+  &__result {
+    margin-top: 20px;
+
+    &--word {
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 10px;
+      line-height: 160%;
+    }
+
+    &--name {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+    }
+
+    &--code {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+
+      span {
+        margin-right: 0.3em;
+
+      }
+
+      a {
+        text-decoration: underline;
+        color: var(--red-primary);
+
+        @include hover {
+          color: var(--red-primary-hover);
+        }
+      }
+    }
+  }
+
+
+
+  @include mobile {
+    .blockColorPicker__picture--cont {
+      padding: 0 15px;
+    }
+
+    .swiper-wrapper {
+      padding-left: 15px;
+    }
+
+    .slider__bottom {
+      padding: 0 15px;
+    }
+
+    .blockColorPicker__result {
+      padding: 0 15px;
+    }
+  }
+
+}

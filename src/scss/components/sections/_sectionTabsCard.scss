@@ -88,13 +88,13 @@
   &__container {
 
     &.open {
-      padding: 0 15px;
+      //padding: 0 15px;
       opacity: 1;
     }
 
     @include mobile {
 
-      padding: 0 15px;
+      //padding: 0 15px;
       overflow: hidden;
       max-height: 0;
       box-sizing: content-box;
@@ -425,6 +425,10 @@
 
 .blockColorPick {
 
+  @include mobile {
+    padding-bottom: 40px;
+  }
+
   .titleC {
     margin-bottom: 50px;
 
@@ -442,9 +446,14 @@
 .tabs-choice {
 
   .tabs__nav--choice {
-    padding: 0;
-    margin: 0 0 20px;
+    padding: 0 !important;
+    margin: 0 0 20px !important;
     gap: 15px;
+    flex-wrap: wrap;
+
+    @include mobile {
+      gap: 10px;
+    }
   }
 
   .tabs__nav-btn--choice {
@@ -455,11 +464,34 @@
     background: var(--white-secondary);
     border-radius: 100px;
     border: none;
+    cursor: pointer;
     padding: 12px 28px;
+
+    @include mobile {
+      padding: 11px 15px 10px;
+      font-size: 12px;
+    }
 
     &.tabs__nav-btn--active {
       background: var(--black-primary);
       color: var(--white-primary);
     }
+
+    &:not(.tabs__nav-btn--active) {
+      @include hover {
+        background: var(--white-third);
+      }
+    }
+
+
   }
+
+
+
+
+}
+
+.padding--mobile {
+  padding-left: 15px;
+  padding-right: 15px;
 }

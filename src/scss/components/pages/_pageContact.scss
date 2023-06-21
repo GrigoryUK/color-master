@@ -186,7 +186,21 @@
   }
 
   &__map {
+    height: 500px;
     display: none;
+
+    @include big-desktop {
+      height: 426px;
+    }
+
+    @include small-tablet {
+      height: 406px;
+    }
+
+    @include mobile {
+      height: 332px;
+    }
+
     &--active {
       display: block;
       animation: anime 1s;

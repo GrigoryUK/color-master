@@ -677,6 +677,28 @@
     }
 
   }
+
+  &.catalog {
+
+    .itemC__button--compare {
+      @include mobile {
+        position: absolute;
+        max-height: 32px;
+        min-height: 32px;
+        max-width: 32px;
+        min-width: 32px;
+        background: transparent;
+        top: 6px;
+        right: 6px;
+      }
+    }
+
+    .itemC__word {
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 .breadcrumbs {
@@ -776,9 +798,9 @@
     align-items: center;
     gap: 20px;
 
-    @include mobile {
-      align-items: flex-start;
-    }
+    //@include mobile {
+    //  align-items: flex-start;
+    //}
 
     svg {
       min-width: 39px;
@@ -1010,7 +1032,7 @@
             transition: all 0.4s ease;
 
             @include mobile {
-              right: 15px;
+              right: 14.7px;
             }
           }
 
@@ -1407,4 +1429,8 @@
   @include mobile {
     margin-bottom: 100px;
   }
+}
+
+.tabs__nav-btn  {
+  cursor: pointer;
 }

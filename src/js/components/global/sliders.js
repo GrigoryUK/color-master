@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination, FreeMode } from 'swiper';
+Swiper.use([Navigation, Pagination, FreeMode]);
 
 export default function slidersJs() {
 
@@ -119,6 +119,8 @@ export default function slidersJs() {
 
       const swiper = new Swiper(slider, {
         // loop: true,
+        grabCursor: true,
+        freeMode: true,
         slidesPerView: 'auto',
         pagination: {
           el: '.swiper-pagination',
@@ -134,6 +136,7 @@ export default function slidersJs() {
         breakpoints: {
 
           0: {
+
             slidesPerView: 1,
             speed: 1000,
             spaceBetween: 15,

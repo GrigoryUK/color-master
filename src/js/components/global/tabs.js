@@ -30,9 +30,7 @@ export default function tabsJs() {
       }
     }
     if (tabsCardChoice) {
-      if (isDesktop()) {
-        const tabsCardChoice = new GraphTabsCustom('tabs-choice', '.tabs__nav--choice', '.tabs__nav-btn--choice', '.tabs__panel--choice');
-      }
+      const tabsCardChoice = new GraphTabsCustom('tabs-choice', '.tabs__nav--choice', '.tabs__nav-btn--choice', '.tabs__panel--choice');
     }
   })();
 

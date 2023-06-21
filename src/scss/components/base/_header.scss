@@ -127,10 +127,23 @@
         &__logo {
           display: flex;
           align-items: center;
+          width: 100%;
           gap: 12px;
           svg {
-            width: 178px;
-            height: 53px;
+            min-width: 170px;
+            max-width: 170px;
+            max-height: 50px;
+
+            @include big-desktop {
+              min-width: 150px;
+              max-width: 150px;
+            }
+
+            @include tablet {
+              max-width: 108px;
+              min-width: 108px;
+            }
+            //height: 53px;
           }
 
           span {
@@ -139,6 +152,7 @@
             line-height: 160%;
             text-transform: uppercase;
             max-width: 170px;
+            min-width: 170px;
             color: var(--black-primary);
 
             @include big-desktop {
@@ -192,12 +206,11 @@
                 color: var(--white-primary);
                 font-size: 10px;
                 position: absolute;
+                font-style: normal;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 line-height: 1;
-                margin-left: -0.7px;
-                margin-bottom: -1px;
               }
 
               .fon {
@@ -245,7 +258,8 @@
           }
 
           &--phone {
-            border: 1px solid var(--black-primary);
+            border: 1px solid var(--white-third);
+            border-left: none;
             font-size: 14px;
             line-height: 160%;
             font-weight: 500;
@@ -260,6 +274,7 @@
             @include hover {
               background: var(--white-third);
               border: 1px solid var(--white-third);
+              border-left: none;
             }
           }
         }

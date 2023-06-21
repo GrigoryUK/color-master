@@ -1,0 +1,17 @@
+.pageColorPicker {
+
+
+  @include mobile {
+    .blockTabs.primary .tabs__content--primary {
+      padding: 0px;
+    }
+
+    .blockBack-primary {
+      padding: 0 15px;
+    }
+
+    .titleC {
+      padding: 0 15px;
+    }
+  }
+}

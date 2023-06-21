@@ -111,6 +111,8 @@ export function headerJs() {
     if (menu) {
       const menuMain = $('*[data-menu-always]');
       const buttonConnection = $('*[data-feedback-open-bid]');
+      const buttonConnectionMobile = $('*[data-feedback-open-bid-mobile]');
+      const buttonCallMobile = $('*[data-feedback-open-phone-mobile]');
       const buttonCall = $('*[data-feedback-open-phone]');
       const buttonClose =  $('*[data-feedback-close]');
 
@@ -127,6 +129,18 @@ export function headerJs() {
         });
 
 
+      })
+
+      buttonConnectionMobile.on('click', function () {
+        menu.fadeIn('fast', function () {
+          menu.find('.feedback__connection').addClass('active');
+        });
+      })
+
+      buttonCallMobile.on('click', function () {
+        menu.fadeIn('fast', function () {
+          menu.find('.feedback__call').addClass('active');
+        });
       })
 
       buttonCall.on('click', function () {

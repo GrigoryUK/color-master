@@ -36,7 +36,7 @@ export default function sliderCardJs() {
       breakpoints: {
 
         0: {
-          slidesPerView: 'auto',
+          slidesPerView: 4,
         },
 
         576: {
@@ -62,6 +62,7 @@ export default function sliderCardJs() {
     const swiperBig = new Swiper(sliderBig, {
       slidesPerView: 1,
       // loop: true,
+      grabCursor: true,
       navigation: {
         nextEl: nextBig,
         prevEl: prevBig,
