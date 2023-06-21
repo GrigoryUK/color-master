@@ -331,6 +331,18 @@
 
   &__map {
     @include mbAll(100, 50, 40);
+    height: 500px;
+    @include big-desktop {
+      height: 426px;
+    }
+
+    @include small-tablet {
+      height: 406px;
+    }
+
+    @include mobile {
+      height: 332px;
+    }
 
     iframe {
       height: 500px;

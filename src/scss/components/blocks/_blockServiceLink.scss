@@ -205,39 +205,37 @@
             transition: all 0.2s ease;
           }
 
-
-
           @include hover {
 
             .image-block-1 {
-              transform: translate(-36px, 38px);
+              transform: translate(-10px, 5px);
 
               @include big-desktop {
-                transform: translate(-18px, 19px);
+                transform: translate(-10px, 5px);
               }
             }
 
             .image-block-2 {
-              transform: translate(-26px, -2px);
+              transform: translate(27px, -6px);
 
               @include big-desktop {
-                transform: translate(-13px, -1px);
+                transform: translate(27px, -6px);
               }
             }
 
             .image-block-3 {
-              transform: translate(-12px, -32px);
+              transform: translate(49px, -17px);
 
               @include big-desktop {
-                transform: translate(-6px, -16px);
+                transform: translate(49px, -17px);
               }
             }
 
             .image-block-4 {
-              transform: translate(14px, -70px);
+              transform: translate(75px, -29px);
 
               @include big-desktop {
-                transform: translate(7px, -35px);
+                transform: translate(75px, -29px);
               }
             }
           }

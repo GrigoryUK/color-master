@@ -1,5 +1,8 @@
-import Swiper, { Navigation, Pagination, FreeMode } from 'swiper';
-Swiper.use([Navigation, Pagination, FreeMode]);
+import Swiper, {Navigation, Pagination, FreeMode, Manipulation} from 'swiper';
+
+Swiper.use([Navigation, Pagination, FreeMode, Manipulation]);
+
+import $ from 'jquery';
 
 export default function slidersJs() {
 
@@ -27,6 +30,7 @@ export default function slidersJs() {
       });
     })
   }
+
   if (swiperHome) {
     swiperHome.forEach(item => {
       const slider = item.querySelector('.swiper-home')
@@ -67,10 +71,14 @@ export default function slidersJs() {
   }
 
   if (swiperCompare) {
+
+
     swiperCompare.forEach(item => {
       const slider = item.querySelector('.swiper-compare')
       const prev = item.querySelector('.arrow-prev');
       const next = item.querySelector('.arrow-next');
+      const buttons = item.querySelectorAll('.itemC__button--compare');
+
 
       const swiper = new Swiper(slider, {
         navigation: {
@@ -105,9 +113,24 @@ export default function slidersJs() {
             slidesPerView: 4,
             spaceBetween: 15,
           }
-        }
+        },
       });
+
+      // for (let i = 0; i < buttons.length)
+
+      buttons.forEach((item, i) => {
+        item.addEventListener('click', event => {
+
+          // swiper.removeSlide(i);
+         // const arr = Array.from(buttons);
+         //  console.log(arr.indexOf(event.target))
+        })
+      })
+
+
     })
+
+
   }
 
 
@@ -121,6 +144,7 @@ export default function slidersJs() {
         // loop: true,
         grabCursor: true,
         freeMode: true,
+        spaceBetween: 15,
         slidesPerView: 'auto',
         pagination: {
           el: '.swiper-pagination',
@@ -136,35 +160,21 @@ export default function slidersJs() {
         breakpoints: {
 
           0: {
-
             slidesPerView: 1,
-            speed: 1000,
-            spaceBetween: 15,
           },
 
 
           768: {
             slidesPerView: 2,
-            speed: 1500,
-            spaceBetween: 15,
           },
 
           1366: {
-            speed: 1500,
-            spaceBetween: 15,
-            slidesPerGroup: 3,
+            slidesPerView: 'auto',
           },
-
-          1900: {
-            speed: 1500,
-            spaceBetween: 15,
-            slidesPerGroup: 4,
-          }
         }
       });
     })
   }
-
 
 
 }

@@ -40,17 +40,21 @@
 
             @include tablet {
               //border: none;
-              border-bottom: 1px solid var(--black-primary);
-              border-left: 1px solid var(--black-primary);
-              border-right: 1px solid var(--black-primary);
+              //border-bottom: 1px solid var(--black-primary);
+              //border-left: 1px solid var(--black-primary);
+              //border-right: 1px solid var(--black-primary);
+
+              border: none;
+              border-top: 1px solid #FAFAFA;
             }
           }
 
           @include tablet {
             border: none;
-            border-bottom: 1px solid var(--black-primary);
-            border-left: 1px solid var(--black-primary);
-            border-right: 1px solid var(--black-primary);
+            border-top: 1px solid #FAFAFA;
+            //border-bottom: 1px solid var(--black-primary);
+            //border-left: 1px solid var(--black-primary);
+            //border-right: 1px solid var(--black-primary);
           }
         }
 
@@ -70,6 +74,12 @@
           padding-bottom: 20px;
           display: block;
 
+          @include tablet {
+            background: #FAFAFA;
+            text-align: left;
+            padding: 22px 15px 21px;
+          }
+
           @include mobile {
             font-size: 14px;
           }
@@ -79,8 +89,8 @@
             color: var(--white-primary);
 
             @include tablet {
-              background: var(--white-third);
-              color: var(--black-primary);
+              background: var(--black-primary);
+              color: var(--white-primary);
             }
           }
 
@@ -168,6 +178,7 @@
           padding: 0 15px;
           z-index: var(--z-index-tabs-dropdown);
           background: var(--white-primary);
+
         }
 
       }

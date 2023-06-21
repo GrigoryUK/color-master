@@ -94,6 +94,31 @@
       }
     }
 
+    .blockTabs.primary .tabs__nav--primary .tabs__nav-btn--primary {
+      background: var(--white-secondary);
+    }
+
+    .blockTabs.primary .tabs__nav--primary .tabs__nav-btn--primary.tabs__nav-btn--active {
+      background: var(--black-primary);
+      color: var(--white-primary);
+    }
+
+    .blockTabs.primary .tabs__nav--primary .tabs__nav-item--primary {
+      border: none;
+
+      &:first-child {
+        @include tablet {
+          border-top: 1px solid #FAFAFA;
+        }
+      }
+
+      @include tablet {
+        border-top: 1px solid #FAFAFA;
+      }
+    }
+
+
+
     .blockTabs.primary .tabs .converted-tab {
       @include tablet {
         min-width: 0;
@@ -197,6 +222,7 @@
 
             span {
               display: block;
+              text-align: left;
 
               @include mobile {
                 font-size: 14px;

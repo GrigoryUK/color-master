@@ -49,8 +49,13 @@
     color: var(--black-primary);
     height: 65px;
     display: flex;
+    padding: 0 10px;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      padding: 0;
+    }
 
 
     &.tabs__nav-btn--active {

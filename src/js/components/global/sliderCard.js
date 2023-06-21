@@ -32,11 +32,12 @@ export default function sliderCardJs() {
       // },
 
       freeMode: true,
+      slidesPerView: 'auto',
 
       breakpoints: {
 
         0: {
-          slidesPerView: 4,
+          // slidesPerView: 4,
         },
 
         576: {
@@ -48,11 +49,11 @@ export default function sliderCardJs() {
         },
 
         1440: {
-          slidesPerView: 3,
+          // slidesPerView: 3,
         },
 
         1600: {
-          slidesPerView: 'auto',
+          // slidesPerView: 'auto',
         }
       }
 

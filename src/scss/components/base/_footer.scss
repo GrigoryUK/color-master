@@ -73,14 +73,14 @@
       }
     }
     svg {
-      min-width: 140px;
-      max-width: 140px;
+      min-width: 120px;
+      max-width: 120px;
       //min-height: 40px;
       //max-height: 40px;
 
       @include tablet {
-        min-width: 160px;
-        max-width: 160px;
+        min-width: 150px;
+        max-width: 150px;
         //min-height: 42px;
         //max-height: 42px;
       }
@@ -180,7 +180,9 @@
           }
 
           &:nth-child(6) {
-            max-width: 172px;
+            @include big-desktop {
+              max-width: 172px;
+            }
           }
 
         }
@@ -485,9 +487,13 @@
         display: inline-block;
         border: solid var(--white-primary);
         border-width: 0 2px 2px 0;
-        padding: 4px;
+        padding: 3px;
         transform: translate(-50%, -50%) rotate(-135deg);
         transition: all 0.2s ease;
+
+        @include mobile {
+          padding: 3px;
+        }
       }
 
       @include hover {
@@ -647,6 +653,10 @@
 
               .btnArrow {
                 margin-right: 20px;
+
+                @include tablet {
+                  margin-top: -6px;
+                }
               }
 
               .contCom {

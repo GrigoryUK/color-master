@@ -2,18 +2,21 @@
   border-right: 1px solid #EAEBEC;
   border-left: 1px solid #EAEBEC;
   border-top: 1px solid #EAEBEC;
-
-  @include mobile {
-    border: none;
-  }
+  max-width: 716px;
 
   @include big-desktop {
-    max-width: 450px;
+    max-width: 448px;
   }
 
   @include tablet {
     max-width: 716px;
   }
+
+  @include mobile {
+    border: none;
+  }
+
+
 
   &--big {
     position: relative;
@@ -28,6 +31,8 @@
       transform: translateY(-50%);
       background: #F4F4F4;
       z-index: 3;
+      width: 50px;
+      height: 50px;
 
       @include mobile {
         display: none;
@@ -147,10 +152,10 @@
       }
 
       @include mobile {
-        max-width: 36px;
-        min-width: 36px;
-        max-height: 54px;
-        min-height: 54px;
+        max-width: 38px;
+        min-width: 38px;
+        max-height: 56px;
+        min-height: 56px;
       }
 
       i {

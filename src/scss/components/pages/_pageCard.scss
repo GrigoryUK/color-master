@@ -287,10 +287,12 @@
                     line-height: 160%;
                     padding: 12px 25px;
                     border: none;
-                    color: #000000;
+                    color: var(--black-primary);
 
                     span {
-                      opacity: 0.5;
+                      @include mobile {
+                        opacity: 0.5;
+                      }
                     }
                   }
                 }

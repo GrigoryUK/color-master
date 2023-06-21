@@ -31,7 +31,6 @@
           }
 
           @include min-desktop {
-            flex-direction: column;
             gap: 1rem;
           }
 
@@ -45,8 +44,9 @@
             }
 
             @include min-desktop {
-              justify-content: space-between;
-              width: 100%;
+              //justify-content: space-between;
+              //width: 100%;
+              gap: 30px;
             }
           }
 
@@ -89,6 +89,10 @@
               font-size: 13px;
             }
 
+            @include min-desktop {
+              width: 140px;
+            }
+
             &.focus-visible {
               background: var(--white-third);
             }
@@ -116,6 +120,8 @@
             @include big-desktop {
               max-width: 80px;
               font-size: 13px;
+              padding-left: 14px;
+              padding-right: 15px;
             }
 
             @include hover {
@@ -129,6 +135,10 @@
           align-items: center;
           width: 100%;
           gap: 12px;
+
+          @include min-desktop {
+            width: auto;
+          }
           svg {
             min-width: 170px;
             max-width: 170px;
@@ -265,6 +275,7 @@
             font-weight: 500;
             text-transform: uppercase;
             padding: 9px 20px;
+            color: #303E47;
 
             @include big-desktop {
               padding: 10px 15px 9px 15px;
@@ -367,10 +378,9 @@
                   position: absolute;
                   top: 50%;
                   display: block;
-                  width: 7px;
+                  width: 6px;
                   height: 1px;
                   transition: all 0.3s ease-out;
-
                   background-color: var(--black-primary);
 
                   transform: translate(-2px, -50%) rotate(45deg);
@@ -459,7 +469,7 @@
             position: absolute;
             width: 100%;
             height: 50vh;
-            background: var(--white-primary);
+            background: var(--white-secondary);
 
 
             ul {
@@ -473,7 +483,7 @@
             position: absolute;
             width: 100vw;
             height: calc(50vh - (var(--height-header-desk) / 2));
-            background: var(--white-primary);
+            background: var(--white-secondary);
 
             @include big-desktop {
               height: 50vh;
