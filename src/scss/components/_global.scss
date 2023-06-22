@@ -872,97 +872,30 @@
         text-transform: uppercase;
         color: var(--black-primary);
         background: var(--white-primary);
+        fill:  var(--black-primary);
+
         &.prev {
 
-          i {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border: solid var(--black-primary);
-            border-width: 2px 0 0 2px;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            position: absolute;
-            left: 52%;
-            top: 50%;
-            transition: all 0.2s ease;
-          }
+          transform: rotate(-180deg);
+
         }
 
         &.next {
 
-          i {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border: solid var(--black-primary);
-            border-width: 2px 0 0 2px;
-            transform: translate(-50%, -50%) rotate(135deg);
-            position: absolute;
-            left: 48%;
-            top: 50%;
-            transition: all 0.2s ease;
-          }
+
+
+
         }
 
         &.next-max {
-          i {
-            &:first-child {
-              content: "";
-              width: 8px;
-              height: 8px;
-              border: solid var(--black-primary);
-              border-width: 2px 0 0 2px;
-              transform: translate(-50%, -50%) rotate(135deg);
-              position: absolute;
-              left: 58%;
-              top: 50%;
-              transition: all 0.2s ease;
-            }
 
-            &:last-child {
-              content: "";
-              width: 8px;
-              height: 8px;
-              border: solid var(--black-primary);
-              border-width: 2px 0 0 2px;
-              transform: translate(-50%, -50%) rotate(135deg);
-              position: absolute;
-              left: 38%;
-              top: 50%;
-              transition: all 0.2s ease;
-            }
+          svg {
+            margin-left: 2px;
           }
         }
 
         &.prev-max {
-
-          i {
-            &:first-child {
-              content: "";
-              width: 8px;
-              height: 8px;
-              border: solid var(--black-primary);
-              border-width: 2px 0 0 2px;
-              transform: translate(-50%, -50%) rotate(-45deg);
-              position: absolute;
-              left: 60%;
-              top: 50%;
-              transition: all 0.2s ease;
-            }
-
-            &:last-child {
-              content: "";
-              width: 8px;
-              height: 8px;
-              border: solid var(--black-primary);
-              border-width: 2px 0 0 2px;
-              transform: translate(-50%, -50%) rotate(-45deg);
-              position: absolute;
-              left: 40%;
-              top: 50%;
-              transition: all 0.2s ease;
-            }
-          }
+          transform: rotate(-180deg);
         }
 
         &.disabled {
@@ -975,6 +908,10 @@
           &:not(.disabled) {
             background: var(--red-primary);
             color: var(--white-primary);
+
+            svg {
+              fill: var(--white-primary);
+            }
 
             i {
               border: solid var(--white-primary);

@@ -14,14 +14,14 @@ export function headerJs() {
       if (container) {
         const buttons = container.find('.dropdownC');
         const menu = container.find('.header__menu--display');
-        buttons.on('click', function (e) {
+        buttons.on('click', function(e){
           e.stopPropagation();
           $('.dropdownC').not($(this)).removeClass('dropdownC-catalog-active');
           $(this).toggleClass('dropdownC-catalog-active');
 
         });
 
-        $(document).on('click', function () {
+        $(document).on('click', function() {
           buttons.removeClass('dropdownC-catalog-active');
         });
 
@@ -65,12 +65,12 @@ export function headerJs() {
 
       if (menu) {
         buttonOpen.on('click', function () {
-          menu.fadeIn('fast')
+          menu.fadeIn()
           disableScrollCustom()
         })
 
         buttonClose.on('click', function () {
-          menu.fadeOut('slow')
+          menu.fadeOut()
           enableScrollCustom()
         })
       }
@@ -105,7 +105,7 @@ export function headerJs() {
 
   (function toggleFeedback() {
 
-    const menu = $('*[data-feedback-always]');
+    const menu =  $('*[data-feedback-always]');
 
 
     if (menu) {
@@ -114,16 +114,16 @@ export function headerJs() {
       const buttonConnectionMobile = $('*[data-feedback-open-bid-mobile]');
       const buttonCallMobile = $('*[data-feedback-open-phone-mobile]');
       const buttonCall = $('*[data-feedback-open-phone]');
-      const buttonClose = $('*[data-feedback-close]');
+      const buttonClose =  $('*[data-feedback-close]');
 
 
       buttonConnection.on('click', function () {
-        if (isDesktop()) {
-          disableScroll.on()
-        }
-        if (isMobile() || isTablet()) {
-          disableScrollCustom()
-        }
+       if (isDesktop()) {
+         disableScroll.on()
+       }
+       if (isMobile() || isTablet()) {
+         disableScrollCustom()
+       }
         menu.fadeIn('fast', function () {
           menu.find('.feedback__connection').addClass('active');
         });
@@ -133,11 +133,7 @@ export function headerJs() {
 
       buttonConnectionMobile.on('click', function () {
         menu.fadeIn('fast', function () {
-          const feedback = menu.find('.feedback__connection');
-          feedback.addClass('active');
-          const data = feedback.find('*[data-feedback-close]');
-          data.removeAttr('data-feedback-close');
-          console.log(data);
+          menu.find('.feedback__connection').addClass('active');
         });
       })
 
@@ -175,6 +171,8 @@ export function headerJs() {
 
       })
     }
+
+
 
 
   })();

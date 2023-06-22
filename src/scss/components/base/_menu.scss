@@ -355,12 +355,26 @@
           >a {
             position: relative;
 
+            &::before {
+              @include pseudo;
+              position: absolute;
+              top: 0;
+              left: -15px;
+              width: calc(100% + 30px);
+              height: 100%;
+              background: var(--white-third);
+              z-index: -1;
+              transition: all 0.4s ease;
+              opacity: 0;
+              visibility: hidden;
+            }
+
             &::after {
               content: "";
               width: 8px;
               height: 8px;
               border: solid var(--black-primary);
-              border-width: 2px 0 0 2px;
+              border-width: 1px 0 0 1px;
               transform: translate(0, -50%) rotate(-135deg);
               position: absolute;
               right: 5px;
@@ -375,9 +389,11 @@
               &::after {
                 transform: translate(0, -50%) rotate(-315deg);
                 top: 50%;
+              }
 
-
-
+              &::before {
+                opacity: 1;
+                visibility: visible;
               }
 
             }

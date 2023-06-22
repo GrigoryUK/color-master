@@ -2,7 +2,7 @@ import Swiper, {Navigation, Pagination, FreeMode, Manipulation} from 'swiper';
 
 Swiper.use([Navigation, Pagination, FreeMode, Manipulation]);
 
-import $ from 'jquery';
+
 
 export default function slidersJs() {
 
@@ -77,7 +77,7 @@ export default function slidersJs() {
       const slider = item.querySelector('.swiper-compare')
       const prev = item.querySelector('.arrow-prev');
       const next = item.querySelector('.arrow-next');
-      const buttons = item.querySelectorAll('.itemC__button--compare');
+      // const buttons = item.querySelectorAll('.itemC__button--compare');
 
 
       const swiper = new Swiper(slider, {
@@ -117,16 +117,25 @@ export default function slidersJs() {
       });
 
       // for (let i = 0; i < buttons.length)
+      // slider.addEventListener('click', el => {
+      //   let buttons = slider.querySelectorAll('.itemC__button--compare');
+      //   buttons.forEach((item, i) => {
+      //     item.addEventListener('click', event => {
+      //       console.log(i);
+      //       swiper.removeSlide(i);
+      //     })
+      //   })
+      // })
+
+      let buttons = slider.querySelectorAll('.itemC__button--compare');
 
       buttons.forEach((item, i) => {
         item.addEventListener('click', event => {
-
-          // swiper.removeSlide(i);
-         // const arr = Array.from(buttons);
-         //  console.log(arr.indexOf(event.target))
+          const slide = item.closest('.swiper-slide');
+          slide.remove();
+          swiper.update();
         })
       })
-
 
     })
 

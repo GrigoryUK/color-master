@@ -26,6 +26,7 @@ export default function calculatorJs() {
       const warning = container.find('.blockCalc__container--buttons--warning');
       const result = container.find('.blockCalc__result');
 
+
       dropdownInput.on('click', function () {
         dropdown.toggleClass('open');
 
@@ -59,7 +60,13 @@ export default function calculatorJs() {
         }
       })
 
-
+      if (container.hasClass('blockCalc--card')) {
+        button.on('click', function () {
+          const dropdownContainer = $(this).closest('.dropdownMobile__container');
+          const height = dropdownContainer.find('.blockCalculator').height();
+          dropdownContainer.css({'maxHeight': height});
+        })
+      }
     }
   })()
 

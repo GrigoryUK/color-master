@@ -362,11 +362,11 @@
 
   &.blockCalc--card {
 
-    .blockCalc__result {
-      @include mobile {
-        display: block;
-      }
-    }
+    //.blockCalc__result {
+    //  @include mobile {
+    //    display: block;
+    //  }
+    //}
   }
 
 
