@@ -208,7 +208,7 @@
   </div>
 </header>
 <div class="header-padding-top"></div>
-<div class="menu--always" data-menu-always>
+<div class="menu--always" data-menu-always data-scroll-lock-scrollable>
   <div class="menu__container">
     <div class="menu__top">
       <a href="home.html" class="menu__logo">
@@ -362,14 +362,22 @@
 <div class="feedback--always" data-feedback-always>
   <div class="feedback__fon" data-feedback-close></div>
   <div class="feedback__swift feedback__connection">
-    <form class="feedbackC">
+    <form class="feedbackC" data-scroll-lock-scrollable>
       <div class="feedbackC__container">
         <div class="feedbackC__row">
-          <button class="btn-reset btn-close" data-feedback-close>
-            <svg class="" width="32" height="32" viewBox="0 0 32 32">
-              <use xlink:href="img/sprite.svg#icon-feedback-close"></use>
-            </svg>
-          </button>
+          <div class="feedbackC__row--cont">
+            <button class="btn-reset btn-close" data-feedback-close>
+              <svg class="" width="32" height="32" viewBox="0 0 32 32">
+                <use xlink:href="img/sprite.svg#icon-feedback-close"></use>
+              </svg>
+            </button>
+            <button class="btn-reset btn-close" data-feedback-close-menu>
+              <svg class="" width="32" height="32" viewBox="0 0 32 32">
+                <use xlink:href="img/sprite.svg#icon-feedback-close"></use>
+              </svg>
+            </button>
+          </div>
+
         </div>
         <div class="feedbackC__title">
           Запросить коммерческое предложение
@@ -412,22 +420,34 @@
           <div class="feedbackC__subtitle">
             Наш менеджер перезвонит вам в ближайшее время.
           </div>
-          <button class="buttonC primary" data-feedback-close>
-            Закрыть
-          </button>
+          <div class="feedbackC__success--buttons">
+            <button class="buttonC primary" data-feedback-close>
+              Закрыть
+            </button>
+            <button class="buttonC primary" data-feedback-close-menu>
+              Закрыть
+            </button>
+          </div>
         </div>
       </div>
     </form>
   </div>
   <div class="feedback__swift feedback__call">
-    <form class="feedbackC">
+    <form class="feedbackC" data-scroll-lock-scrollable>
       <div class="feedbackC__container">
         <div class="feedbackC__row">
-          <button class="btn-reset btn-close" data-feedback-close>
-            <svg class="" width="32" height="32" viewBox="0 0 32 32">
-              <use xlink:href="img/sprite.svg#icon-feedback-close"></use>
-            </svg>
-          </button>
+          <div class="feedbackC__row--cont">
+            <button class="btn-reset btn-close" data-feedback-close>
+              <svg class="" width="32" height="32" viewBox="0 0 32 32">
+                <use xlink:href="img/sprite.svg#icon-feedback-close"></use>
+              </svg>
+            </button>
+            <button class="btn-reset btn-close" data-feedback-close-menu>
+              <svg class="" width="32" height="32" viewBox="0 0 32 32">
+                <use xlink:href="img/sprite.svg#icon-feedback-close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="feedbackC__title">
           Обратная связь
@@ -461,9 +481,14 @@
           <div class="feedbackC__subtitle">
             Наш менеджер перезвонит вам в ближайшее время.
           </div>
-          <button class="buttonC primary" data-feedback-close>
-            Закрыть
-          </button>
+          <div class="feedbackC__success--buttons">
+            <button class="buttonC primary" data-feedback-close>
+              Закрыть
+            </button>
+            <button class="buttonC primary" data-feedback-close-menu>
+              Закрыть
+            </button>
+          </div>
         </div>
       </div>
     </form>

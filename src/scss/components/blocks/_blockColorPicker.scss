@@ -1,6 +1,4 @@
-
 .blockColorPicker {
-
   .titleC {
     margin-bottom: 50px;
   }
@@ -16,24 +14,162 @@
     }
   }
 
-  &__picture {
+  .data-picker-top {
+    position: absolute;
+    width: 76%;
+    height: 11%;
+    z-index: 5;
+  }
 
+  .data-bg-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 82%;
+    height: 11.3%;
+    background: #9f9f9f;
+    z-index: 3;
+    clip-path: polygon(0 0, 99% 0%, 91% 100%, 0 100%);
+
+    @include breakpoint(1800px) {
+      width: 88%;
+      clip-path: polygon(0 0, 99% 0%, 90% 100%, 0 100%);
+    }
+
+    @include big-desktop {
+      width: 92%;
+      clip-path: polygon(0 0, 100% 0%, 91% 100%, 0 100%);
+    }
+
+    @include breakpoint(1280px) {
+      width: 100%;
+      clip-path: polygon(0 0, 103% 0%, 92% 100%, 0 100%);
+    }
+
+    @include tablet {
+      width: 83%;
+
+      clip-path: polygon(0 0, 99% 0%, 91% 100%, 0 100%);
+    }
+
+    @include small-tablet {
+      width: 92%;
+
+      clip-path: polygon(0 0, 100% 0%, 92% 100%, 0 100%);
+    }
+
+    @include mobile {
+      width: 81%;
+    }
+  }
+  .data-bg-wall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #9f9f9f;
+  }
+
+  .data-img-hard {
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &__picture {
     &--cont {
       width: 100%;
       height: 580px;
       max-width: 1040px;
-
+      overflow: hidden;
       cursor: pointer;
+      position: relative;
 
       @include mobile {
-        height: 270px;
+        height: auto;
       }
     }
 
-    background: #D9D9D9;
     width: 100%;
     height: 100%;
 
+    @include mobile {
+      position: relative;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 68px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__button {
+    border-radius: 100px;
+    background: var(--white-fourth);
+    color: var(--black-primary);
+    padding: 12px 30px;
+    line-height: 160%;
+
+    &:not(.active) {
+      @include hover {
+        background: var(--white-third);
+      }
+    }
+
+    &.active {
+      background: var(--black-primary);
+      color: var(--white-primary);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__canvas {
+    &--top {
+      // position: absolute;
+      width: 100%;
+      // height: 11%;
+      height: 100%;
+      z-index: 5;
+    }
+  }
+
+  &__top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #d9d9d9;
+    z-index: var(--z-color-picker-top);
+    z-index: 5;
+    transform: translate(-10%, -90%) rotate(-45deg);
+  }
+
+  &__wall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #d9d9d9;
+    z-index: var(--z-color-picker-wall);
+  }
+
+  &__img {
+    position: relative;
+    // z-index: var(--z-color-picker-img);
+  }
+
+  &__bg--fasad {
   }
 
   &__slider {
@@ -47,12 +183,9 @@
       max-width: 100%;
     }
 
-
     .swiper-horizontal > .swiper-scrollbar {
-      background: #EAEBEC;
+      background: #eaebec;
       max-width: 652px;
-
-
 
       @include big-desktop {
         max-width: 442px;
@@ -91,7 +224,6 @@
       align-items: center;
       justify-content: space-between;
 
-
       .arrowC {
         max-width: 24px;
         min-width: 24px;
@@ -102,7 +234,6 @@
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         position: relative;
-
 
         @include hover {
           background: var(--red-primary-hover);
@@ -122,7 +253,6 @@
         }
 
         &.arrow-prev {
-
           i {
             left: 54%;
             transform: translate(-50%, -50%) rotate(-45deg);
@@ -130,17 +260,13 @@
         }
 
         &.arrow-next {
-
           i {
             left: 46%;
             transform: translate(-50%, -50%) rotate(135deg);
           }
-
         }
       }
     }
-
-
 
     .blockColors {
       display: flex;
@@ -152,7 +278,7 @@
       .item--color {
         width: 100px;
         height: 100px;
-        background: #FFFFFF;
+        background: #ffffff;
         cursor: pointer;
         padding: 3px;
         position: relative;
@@ -176,7 +302,7 @@
           transition: all 0.2s ease;
 
           &::after {
-            content: '';
+            content: "";
             display: block;
             width: 5px;
             height: 8px;
@@ -188,18 +314,15 @@
         }
 
         &.active {
-          border: 3px solid #424A52;
+          border: 3px solid #424a52;
 
           i {
             opacity: 1;
             visibility: visible;
           }
         }
-
       }
     }
-
-
   }
 
   &__result {
@@ -225,7 +348,6 @@
 
       span {
         margin-right: 0.3em;
-
       }
 
       a {
@@ -238,8 +360,6 @@
       }
     }
   }
-
-
 
   @include mobile {
     .blockColorPicker__picture--cont {
@@ -258,5 +378,4 @@
       padding: 0 15px;
     }
   }
-
 }

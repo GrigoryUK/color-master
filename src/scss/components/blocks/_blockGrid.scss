@@ -1,15 +1,10 @@
-
 .blockGrid {
-
   &.blockGrid--catalog {
-
-
     .blockGrid {
-
       &__content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        border-top: 1px solid var(--white-third);
+
         border-left: 1px solid var(--white-third);
 
         @include tablet {
@@ -25,12 +20,21 @@
           border-right: 1px solid var(--white-third);
           border-bottom: 1px solid var(--white-third);
 
+          &:nth-child(1) {
+            border-top: 1px solid var(--white-third);
+          }
+          &:nth-child(2) {
+            border-top: 1px solid var(--white-third);
+          }
+          &:nth-child(3) {
+            border-top: 1px solid var(--white-third);
+          }
+
           @include mobile {
             padding-top: 20px;
           }
 
           .itemC__image {
-
           }
 
           .itemC__image img {
@@ -47,10 +51,8 @@
             }
 
             @include mobile {
-
               max-height: 140px;
             }
-
           }
 
           .itemC__row {
@@ -67,7 +69,6 @@
           }
 
           @include hover {
-
             @include big-desktop {
               .itemC__image img {
                 transform: scale(0.6, 0.6);
@@ -77,13 +78,10 @@
         }
       }
     }
-
-
   }
 
   &.blockGrid--catalog--search {
     .blockGrid {
-
       &__content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -130,7 +128,6 @@
           }
 
           @include hover {
-
             @include big-desktop {
               .itemC__image img {
                 transform: scale(0.6, 0.6);
@@ -140,8 +137,5 @@
         }
       }
     }
-
-
   }
-
 }

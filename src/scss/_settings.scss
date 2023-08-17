@@ -42,8 +42,6 @@ input {
   transition: all 0.2s ease;
 }
 
-
-
 a {
   text-decoration: none;
   transition: all 0.2s ease;
@@ -54,7 +52,8 @@ button {
   box-sizing: border-box;
 }
 
-input,textarea {
+input,
+textarea {
   outline: none;
   transition: all 0.2s ease;
   box-sizing: border-box;
@@ -62,7 +61,6 @@ input,textarea {
 
 .site-container {
   overflow: hidden;
-
 }
 
 .is-hidden {
@@ -149,11 +147,10 @@ input,textarea {
 }
 
 .display-none {
-  display: none !important;
+  display: none;
 }
 
 .container-minus-header {
-
   height: calc(100vh - var(--height-header-desk));
 
   @include big-desktop {

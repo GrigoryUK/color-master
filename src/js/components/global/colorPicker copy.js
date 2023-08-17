@@ -70,28 +70,8 @@ export default function colorPickerJS() {
       })();
 
 
-      (function changeLocation() {
-        const buttonRoom = $('.data-button-colorpicker-room');
-        const buttonFC = $('.data-button-colorpicker-facad');
-        const contRoom = $('.data-picker-hard');
-        const contFC = $('.data-picker-normal');
 
-        buttonRoom.on('click', function () {
-          $(this).addClass('active');
-          buttonFC.removeClass('active');
-          contFC.fadeOut('fast');
-          contRoom.fadeIn('fast');
 
-        })
-
-        buttonFC.on('click', function () {
-          $(this).addClass('active');
-          buttonRoom.removeClass('active');
-
-          contRoom.fadeOut('fast');
-          contFC.fadeIn('fast');
-        })
-      })();
 
 
 
@@ -129,18 +109,82 @@ export default function colorPickerJS() {
   }
 
 
+    // clickPicture('.data-picker-hard')
     clickPicture('.data-picker-normal')
-    clickPicture('.data-bg-top')
-    clickPicture('.data-bg-wall')
+
+
+  function changeLocation() {
+    const buttonRoom = $('.data-button-colorpicker-room');
+    const buttonFC = $('.data-button-colorpicker-facad');
+    const contRoom = $('.data-picker-hard');
+    const contFC = $('.data-picker-normal');
+
+    buttonRoom.on('click', function () {
+      $(this).addClass('active');
+      buttonFC.removeClass('active');
+      contFC.fadeOut('fast');
+      contRoom.fadeIn('fast');
+
+    })
+
+    buttonFC.on('click', function () {
+      $(this).addClass('active');
+      buttonRoom.removeClass('active');
+
+      contRoom.fadeOut('fast');
+      contFC.fadeIn('fast');
+    })
+  }
+
+  changeLocation()
+
+
+
+  function canvasSleep() {
+    const canvas = document.getElementById('canvasRoom');
+
+
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      const img = document.querySelector('.data-img-room');
+
+      function clickTop() {
+        $('.data-picker-top').on('click', function() {
+          const color = localStorage.getItem('user-select-color');
+          console.log(color);
+
+          top(color);
+        })
+      }
 
 
 
 
+      function top(color) {
+
+        ctx.beginPath();
+			  ctx.moveTo(0, 0);
+			  ctx.lineTo(842, 0);
+        ctx.lineTo(772, 66);
+        ctx.lineTo(0, 66);
+        ctx.lineTo(0, 0);
+        console.log(2);
+        ctx.fillStyle = color;
+
+        ctx.fill();
+      }
+      top()
+      clickTop()
+      // clickTop()
 
 
+      ctx.drawImage(img, 0, 0);
 
 
+    }
+  }
 
+  canvasSleep()
 
 
 }

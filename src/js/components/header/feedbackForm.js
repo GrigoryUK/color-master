@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import Inputmask from "inputmask";
+import Inputmask from "inputmask"
+import $ from 'jquery'
 
 export function feedbackForm() {
 

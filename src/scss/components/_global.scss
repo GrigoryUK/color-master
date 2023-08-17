@@ -32,7 +32,6 @@
     width: 100%;
     background: var(--white-primary);
 
-
     @include hover {
       background: var(--red-primary-hover);
       color: var(--white-primary);
@@ -77,7 +76,6 @@
   display: inline-block;
   margin-bottom: 2px;
 
-
   &::before,
   &::after {
     content: "";
@@ -98,7 +96,6 @@
   }
 
   &.caretC-rotate {
-
     &::before,
     &::after {
       background-color: var(--white-primary);
@@ -112,11 +109,8 @@
   }
 }
 
-
 .inputC {
-
   &.primary {
-
     input,
     textarea {
       border-radius: 0;
@@ -162,7 +156,6 @@
     textarea {
       resize: none;
       height: 108px;
-
     }
   }
 }
@@ -183,7 +176,6 @@
 }
 
 .titleC {
-
   &.primary {
     font-weight: 500;
     font-size: 46px;
@@ -235,10 +227,7 @@
 }
 
 .textC {
-
   &.service {
-
-
     p {
       margin: 0 0 2em;
       font-weight: 300;
@@ -251,12 +240,9 @@
     }
   }
 
-
   &.company {
     max-width: 1208px;
     margin: 0 auto;
-
-
 
     h6 {
       font-weight: 500;
@@ -283,19 +269,10 @@
       }
     }
   }
-
-
-
-
-
-
-
-
 }
 
 .itemC {
   position: relative;
-
 
   &.service {
     display: flex;
@@ -317,22 +294,17 @@
     }
 
     @include hover {
-
       span {
         color: var(--red-primary);
       }
     }
   }
 
-
   &.product {
     overflow: hidden;
 
     .itemC {
-
-
       &__button {
-
         &--price {
           position: absolute;
           font-weight: 500;
@@ -349,12 +321,11 @@
           transform: translateY(-101%);
           @include transitionMain;
           z-index: var(--z-index-button-item-catalog);
-
         }
 
         &--compare {
           position: relative;
-          background: #F9F9F9;
+          background: #f9f9f9;
           border-radius: 100px;
           max-height: 50px;
           min-height: 50px;
@@ -368,7 +339,7 @@
             transform: translate(-50%, -50%);
             width: 20px;
             height: 19px;
-            fill: #292D32;
+            fill: #292d32;
           }
 
           @include hover {
@@ -406,10 +377,7 @@
         @include tablet {
           font-size: 14px;
         }
-
       }
-
-
     }
 
     @include hover {
@@ -420,10 +388,13 @@
 
       .itemC__button--price {
         transform: translateY(0%);
+
+        @include tablet {
+          transform: translateY(-101%);
+        }
       }
 
       .itemC__image {
-
         img {
           transform: scale(0.8, 0.8);
         }
@@ -432,7 +403,6 @@
       .itemC__button--compare {
         background: var(--white-third);
       }
-
     }
   }
 
@@ -458,7 +428,6 @@
       @include mobile {
         max-height: 346px;
       }
-
     }
 
     span {
@@ -511,8 +480,6 @@
         transform: translateY(-101%);
       }
 
-
-
       .itemC__word {
         color: var(--black-primary);
       }
@@ -527,7 +494,6 @@
     }
 
     .itemC {
-
       &__main {
         border: 1px solid var(--white-third);
         margin-bottom: 20px;
@@ -555,7 +521,6 @@
       }
 
       &__button {
-
         &--compare {
           background: var(--red-primary);
 
@@ -581,18 +546,14 @@
       }
 
       &__image {
-
         img {
           @include mobile {
             padding-top: 1rem;
           }
         }
-
-
       }
 
       &__info {
-
         @include mobile {
           padding: 0 15px;
         }
@@ -624,7 +585,6 @@
             font-size: 15px;
             line-height: 140%;
 
-
             &:first-child {
               font-weight: 500;
 
@@ -637,7 +597,6 @@
               @include mobile {
                 font-size: 12px;
               }
-
             }
 
             &:last-child {
@@ -683,11 +642,9 @@
         }
       }
     }
-
   }
 
   &.catalog {
-
     .itemC__button--compare {
       @include mobile {
         position: absolute;
@@ -710,7 +667,6 @@
 }
 
 .breadcrumbs {
-
   &.primary {
     margin-top: 20px;
     margin-bottom: 60px;
@@ -771,7 +727,6 @@
       margin-bottom: 10px;
     }
   }
-
 }
 
 .title__container--company {
@@ -781,7 +736,6 @@
 }
 
 .videoC {
-
   &.primary {
     position: relative;
     display: flex;
@@ -800,7 +754,6 @@
 }
 
 .fileC {
-
   &.primary {
     display: flex;
     align-items: center;
@@ -826,7 +779,6 @@
     }
 
     @include hover {
-
       span {
         color: var(--red-primary);
       }
@@ -835,7 +787,6 @@
 }
 
 .pagination {
-
   &.primary {
     padding: 0;
     margin: 0;
@@ -844,13 +795,9 @@
     gap: 20px;
 
     .page-item {
-
-
       &.active {
-
         .page-numbers {
           border: 1px solid var(--red-primary);
-
         }
       }
 
@@ -872,23 +819,16 @@
         text-transform: uppercase;
         color: var(--black-primary);
         background: var(--white-primary);
-        fill:  var(--black-primary);
+        fill: var(--black-primary);
 
         &.prev {
-
           transform: rotate(-180deg);
-
         }
 
         &.next {
-
-
-
-
         }
 
         &.next-max {
-
           svg {
             margin-left: 2px;
           }
@@ -904,7 +844,6 @@
         }
 
         @include hover {
-
           &:not(.disabled) {
             background: var(--red-primary);
             color: var(--white-primary);
@@ -928,23 +867,18 @@
               }
             }
           }
-
         }
-
-
       }
     }
   }
 }
 
 .filterC {
-
   &.primary {
     background: var(--white-secondary);
     border-radius: 4px;
     position: relative;
     .filterC {
-
       &__button {
         display: none;
 
@@ -980,8 +914,6 @@
               right: 14.7px;
             }
           }
-
-
 
           &.open {
             &::after {
@@ -1049,18 +981,15 @@
             color: var(--red-primary);
           }
         }
-
       }
     }
   }
 }
 
 .dropdownC {
-
   &.dropdownC--filters {
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid #e0e0e0;
     .dropdownC {
-
       &__btn {
         font-weight: 500;
         font-size: 16px;
@@ -1077,7 +1006,6 @@
         @include mobile {
           font-size: 14px;
         }
-
 
         &::after {
           content: "";
@@ -1102,7 +1030,6 @@
         }
 
         &.open {
-
           background: var(--white-secondary-hover);
           &::after {
             top: 49%;
@@ -1127,7 +1054,6 @@
         transition: all 0.3s ease-out;
         will-change: max-height;
 
-
         &.open {
           padding: 20px 0;
           opacity: 1;
@@ -1138,7 +1064,6 @@
 }
 
 .checkboxC {
-
   &.checkboxC--primary {
     display: flex;
     align-items: center;
@@ -1151,7 +1076,7 @@
       --active-inner: #fff;
       --border: var(--primary4);
       --border-hover: var(--primary4);
-      --background: #EEEEEE;
+      --background: #eeeeee;
       --disabled: #f6f8ff;
       --disabled-inner: #e1e6f9;
 
@@ -1168,7 +1093,10 @@
       min-height: 23px;
       max-height: 23px;
       background: var(--b, var(--background));
-      transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+      transition:
+        background 0.3s,
+        border-color 0.3s,
+        box-shadow 0.2s;
       cursor: pointer;
 
       &::after {
@@ -1192,7 +1120,6 @@
       }
 
       &:not(.switch) {
-
         &::after {
           opacity: var(--o, 0);
         }
@@ -1221,9 +1148,6 @@
           font-size: 13px;
           margin-top: 0;
         }
-
-
-
 
         &.active {
           color: var(--red-primary);
@@ -1268,15 +1192,12 @@
 }
 
 .collapseC {
-
   &.collapseC--primary {
-
     @include mobile {
       padding: 0 15px;
     }
 
     .collapseC {
-
       &--title {
         font-weight: 500;
         font-size: 22px;
@@ -1315,7 +1236,7 @@
         width: 100%;
         height: 10px;
         margin-top: -15px;
-        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
         transform: rotate(-180deg);
         transition: all 0.2s ease;
 
@@ -1353,13 +1274,48 @@
         }
 
         &.active {
-
           i {
             top: 60%;
             transform: translate(0, -50%) rotate(-315deg);
           }
         }
       }
+    }
+  }
+}
+
+.levelC {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  &__item {
+    border-radius: 2px;
+    background: #d9d9d9;
+    width: 6px;
+    height: 15px;
+
+    &--1 {
+      height: 13px;
+    }
+
+    &--2 {
+      height: 15px;
+    }
+
+    &--3 {
+      height: 17px;
+    }
+
+    &--4 {
+      height: 19px;
+    }
+
+    &--5 {
+      height: 21px;
+    }
+
+    &.active {
+      background: var(--red-primary);
     }
   }
 }
@@ -1392,6 +1348,6 @@
   }
 }
 
-.tabs__nav-btn  {
+.tabs__nav-btn {
   cursor: pointer;
 }

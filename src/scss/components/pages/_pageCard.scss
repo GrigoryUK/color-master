@@ -1,7 +1,5 @@
 .pageCard {
-
   &__content {
-
     .sectionHero {
       margin-bottom: 70px;
 
@@ -16,12 +14,11 @@
       }
 
       .button--compare {
-
         border: none;
         padding: 0;
         cursor: pointer;
         position: relative;
-        background: #F9F9F9;
+        background: #f9f9f9;
         border-radius: 100px;
         max-height: 50px;
         min-height: 50px;
@@ -42,7 +39,7 @@
           transform: translate(-50%, -50%);
           width: 20px;
           height: 19px;
-          fill: #292D32;
+          fill: #292d32;
         }
 
         @include hover {
@@ -53,9 +50,7 @@
           }
         }
 
-
         &.desk {
-
           @include tablet {
             display: none;
           }
@@ -103,7 +98,6 @@
             top: 15px;
             z-index: 3;
             left: -22px;
-
           }
 
           @include mobile {
@@ -113,7 +107,6 @@
         }
 
         .blockTest {
-
           height: 672px;
           background: red;
 
@@ -132,11 +125,8 @@
       }
 
       &__right {
-
         .blockInfo {
-
           &.blockInfo--card {
-
             @include mobile {
               padding: 0 15px;
             }
@@ -150,7 +140,6 @@
             }
 
             .blockInfo {
-
               &__hero {
                 display: flex;
                 align-items: center;
@@ -163,8 +152,6 @@
                 }
 
                 &--compare {
-
-
                   @include tablet {
                     display: none;
                   }
@@ -175,6 +162,7 @@
                   font-size: 28px;
                   line-height: 160%;
                   text-transform: uppercase;
+                  margin: 0;
 
                   @include small-tablet {
                     max-width: 568px;
@@ -251,8 +239,6 @@
               }
 
               &__main {
-
-
                 &--cont {
                   display: flex;
                   align-items: center;
@@ -272,7 +258,6 @@
               }
 
               &__weight {
-
                 &--buttons {
                   display: flex;
                   gap: 10px;
@@ -411,7 +396,6 @@
               }
 
               &__links {
-
                 .mini-span {
                   margin-bottom: 15px;
                 }
@@ -433,25 +417,19 @@
                     flex-shrink: 0;
 
                     @include mobile {
-                        max-width: 105px;
-                        max-height: 50px;
+                      max-width: 105px;
+                      max-height: 50px;
                     }
                   }
-
-
                 }
               }
             }
           }
         }
-
       }
-
     }
 
-
     .sectionRecommendationSlider {
-
       @include mobile {
         display: none;
       }

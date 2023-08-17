@@ -358,10 +358,10 @@
             &::before {
               @include pseudo;
               position: absolute;
-              top: 0;
+              top: -1px;
               left: -15px;
               width: calc(100% + 30px);
-              height: 100%;
+              height: calc(100% + 2px);
               background: var(--white-third);
               z-index: -1;
               transition: all 0.4s ease;
@@ -388,7 +388,7 @@
 
               &::after {
                 transform: translate(0, -50%) rotate(-315deg);
-                top: 50%;
+                top: 55%;
               }
 
               &::before {

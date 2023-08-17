@@ -67,6 +67,27 @@
     position: relative;
     z-index: var(--z-header-feedback-close);
 
+    &--cont {
+      position: relative;
+
+      button {
+        height: 32px;
+        &:first-child {
+          position: relative;
+          z-index: 1;
+        }
+        &:last-child {
+          left: 0;
+          position: absolute;
+
+          &.active {
+            z-index: 2;
+          }
+
+        }
+      }
+    }
+
   }
 
   &__title {
@@ -147,6 +168,25 @@
     height: 100%;
     padding-top: 42px;
     display: none;
+
+    &--buttons {
+      position: relative;
+
+      button {
+        &:first-child {
+          position: relative;
+          z-index: 1;
+        }
+        &:last-child {
+          position: absolute;
+          left: 0;
+
+          &.active {
+            z-index: 2;
+          }
+        }
+      }
+    }
 
     @include mobile {
       left: 0;

@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import {isDesktop, isMobile, isTablet} from "../../functions/check-viewport";
 import disableScroll from 'disable-scroll';
-import {disableScrollCustom, enableScrollCustom} from "../library/srollMove";
+// import {disableScrollCustom, enableScrollCustom} from "../library/srollMove";
 
-
+import scrollLock from 'scroll-lock';
 export function headerJs() {
 
 
@@ -66,12 +66,12 @@ export function headerJs() {
       if (menu) {
         buttonOpen.on('click', function () {
           menu.fadeIn('fast')
-          disableScrollCustom()
+          scrollLock.disablePageScroll();
         })
 
         buttonClose.on('click', function () {
-          menu.fadeOut('slow')
-          enableScrollCustom()
+          menu.fadeOut('fast')
+          scrollLock.enablePageScroll();
         })
       }
     }());
@@ -115,6 +115,7 @@ export function headerJs() {
       const buttonCallMobile = $('*[data-feedback-open-phone-mobile]');
       const buttonCall = $('*[data-feedback-open-phone]');
       const buttonClose = $('*[data-feedback-close]');
+      const buttonCloseMenu = $('*[data-feedback-close-menu]');
 
 
       buttonConnection.on('click', function () {
@@ -122,7 +123,7 @@ export function headerJs() {
           disableScroll.on()
         }
         if (isMobile() || isTablet()) {
-          disableScrollCustom()
+          scrollLock.disablePageScroll();
         }
         menu.fadeIn('fast', function () {
           menu.find('.feedback__connection').addClass('active');
@@ -135,15 +136,14 @@ export function headerJs() {
         menu.fadeIn('fast', function () {
           const feedback = menu.find('.feedback__connection');
           feedback.addClass('active');
-          const data = feedback.find('*[data-feedback-close]');
-          data.removeAttr('data-feedback-close');
-          console.log(data);
+          buttonCloseMenu.addClass('active');
         });
       })
 
       buttonCallMobile.on('click', function () {
         menu.fadeIn('fast', function () {
           menu.find('.feedback__call').addClass('active');
+          buttonCloseMenu.addClass('active');
         });
       })
 
@@ -152,7 +152,7 @@ export function headerJs() {
           disableScroll.on()
         }
         if (isMobile() || isTablet()) {
-          disableScrollCustom()
+          scrollLock.disablePageScroll();
         }
         menu.fadeIn('fast', function () {
           menu.find('.feedback__call').addClass('active');
@@ -170,9 +170,17 @@ export function headerJs() {
           disableScroll.off()
         }
         if (isMobile() || isTablet()) {
-          enableScrollCustom()
+          scrollLock.enablePageScroll();
         }
 
+      })
+
+      buttonCloseMenu.on('click', function (e) {
+        e.preventDefault();
+        menu.find('.feedback__connection').removeClass('active');
+        menu.find('.feedback__call').removeClass('active');
+        menu.fadeOut('slow');
+        buttonCloseMenu.removeClass('active');
       })
     }
 

@@ -63,8 +63,8 @@ export default function cardJs() {
         }
         if (isMobile()) {
           scrollTo(mobCont, 80);
-          if (!mobCont.find('button').hasClass('open')) {
-            mobCont.find('button').click();
+          if (!mobCont.find('.button--dropdown').hasClass('open')) {
+            mobCont.find('.button--dropdown').click();
           }
 
         }
