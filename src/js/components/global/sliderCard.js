@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Pagination, Thumbs, FreeMode} from 'swiper';
+import Swiper, { FreeMode, Navigation, Pagination, Thumbs } from 'swiper'
 
 Swiper.use([Navigation, Pagination, Thumbs, FreeMode]);
 
@@ -63,7 +63,6 @@ export default function sliderCardJs() {
     const swiperBig = new Swiper(sliderBig, {
       slidesPerView: 1,
       // loop: true,
-      grabCursor: true,
       navigation: {
         nextEl: nextBig,
         prevEl: prevBig,

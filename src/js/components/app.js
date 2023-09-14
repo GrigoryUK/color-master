@@ -6,6 +6,7 @@ import collapseJs from "./global/collapse"
 import colorPickerJS from "./global/colorPicker"
 import { cookieJS } from "./global/cookie"
 import filtersJs from "./global/filters"
+import { modalJs } from './global/modal'
 import { mutationCatalogJS } from "./global/mutationCatalog"
 import sliderCardJs from "./global/sliderCard"
 import slidersJs from "./global/sliders"
@@ -30,4 +31,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   calculatorHoverJs()
   cookieJS()
   mutationCatalogJS()
+  modalJs()
 });

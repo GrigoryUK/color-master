@@ -1,11 +1,8 @@
 .pageServiceOrganizations {
-
   &__panel {
-
   }
 
   &__grid {
-
     .titleC {
       margin-bottom: 20px;
       max-width: 774px;
@@ -13,7 +10,7 @@
 
     .textC {
       margin-bottom: 50px;
-      max-width: 774px;
+      // max-width: 774px;
     }
 
     .gridCom {
@@ -57,7 +54,7 @@
         }
 
         @include hover {
-          background: #EDEDED;
+          background: #ededed;
         }
 
         img {
@@ -71,8 +68,6 @@
         }
       }
     }
-
-
   }
 
   &__recommendation {
@@ -102,8 +97,6 @@
         max-width: 774px;
         width: 100%;
 
-
-
         @include big-desktop {
           max-width: 630px;
         }
@@ -116,7 +109,6 @@
           margin-bottom: 20px;
 
           &.desk {
-
             @include tablet {
               display: none;
             }
@@ -172,7 +164,6 @@
   }
 
   &__marketing {
-
     .titleC {
       margin-bottom: 20px;
     }
@@ -183,9 +174,7 @@
     }
 
     .MarketingCom {
-
       &__grid {
-
       }
 
       .buttonC {
@@ -197,6 +186,4 @@
       }
     }
   }
-
-
 }

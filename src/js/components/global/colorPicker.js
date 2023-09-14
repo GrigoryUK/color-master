@@ -53,10 +53,9 @@ export default function colorPickerJS() {
         items.removeClass('active');
         item.addClass('active');
         const attrColor = item.attr('data-color');
-        const attrNumber = item.attr('data-number');
-        const attrBase = item.attr('data-base');
+        const attrName = item.attr('data-name');
         localStorage.setItem('user-select-color', attrColor);
-        result.text(`NCS S ${attrNumber}-${attrBase}`);
+        result.text(`${attrName}`);
       }
 
 
@@ -79,8 +78,8 @@ export default function colorPickerJS() {
         buttonRoom.on('click', function () {
           $(this).addClass('active');
           buttonFC.removeClass('active');
-          contFC.fadeOut('fast');
-          contRoom.fadeIn('fast');
+          contFC.css('display', 'none');
+          contRoom.css('display', 'block');
 
         })
 
@@ -88,8 +87,8 @@ export default function colorPickerJS() {
           $(this).addClass('active');
           buttonRoom.removeClass('active');
 
-          contRoom.fadeOut('fast');
-          contFC.fadeIn('fast');
+          contRoom.css('display', 'none');
+          contFC.css('display', 'block');
         })
       })();
 
@@ -97,7 +96,7 @@ export default function colorPickerJS() {
 
       (function toggleActive(){
         const item = $('.item--color');
-        const result = $('.blockColorPicker__result--code').find('a');
+        const result = $('.blockColorPicker__result--code').find('.code');
 
         item.on('click', function () {
           setColorActive(item, $(this), result);
@@ -109,7 +108,7 @@ export default function colorPickerJS() {
 
 
       (function startClickColor() {
-        const item = $('.item--color').eq(10);
+        const item = $('.item--color').eq(4);
         item.click();
       })();
 

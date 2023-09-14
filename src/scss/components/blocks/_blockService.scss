@@ -22,8 +22,6 @@
     margin-bottom: 30px;
     gap: 30px;
   }
-
-
 }
 
 .blockServiceGrid-2 {
@@ -35,12 +33,10 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
-
-
 }
 
 .blockServiceText-primary {
-  max-width: 774px;
+  // max-width: 774px;
 
   .titleC {
     margin-bottom: 20px;
@@ -50,5 +46,3 @@
     margin-bottom: 50px;
   }
 }
-
-

@@ -1,0 +1,54 @@
+.fslightbox-container {
+  background: var(--white-primary) !important;
+}
+
+.fslightbox-slide-number-container {
+  display: none !important;
+}
+
+.fslightbox-slide-btn-container {
+  padding: 30px 50px 30px 50px !important;
+
+  @include tablet {
+    padding: 30px 10px 30px 10px !important;
+  }
+
+  @include small-tablet {
+    display: none !important;
+  }
+}
+.fslightbox-slide-btn.fslightbox-flex-centered {
+  background: #f4f4f4 !important;
+  border-radius: 100px !important;
+
+  .fslightbox-svg-path {
+    fill: #424a52 !important;
+  }
+}
+
+.fslightbox-toolbar {
+  background: transparent !important;
+  top: 25px !important;
+  right: 20px !important;
+
+  @include tablet {
+    top: 0px !important;
+    right: 0px !important;
+  }
+
+  .fslightbox-toolbar-button.fslightbox-flex-centered {
+    &:first-child {
+      display: none;
+    }
+
+    @include hover {
+      .fslightbox-svg-path {
+        fill: var(--red-primary-hover) !important;
+      }
+    }
+
+    .fslightbox-svg-path {
+      fill: var(--red-primary);
+    }
+  }
+}
