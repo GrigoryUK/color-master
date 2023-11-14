@@ -1,16 +1,14 @@
-import $ from 'jquery'
-import Swiper, { FreeMode, Navigation, Pagination, Scrollbar } from 'swiper'
+import $ from "jquery";
+import Swiper, { FreeMode, Navigation, Pagination, Scrollbar } from "swiper";
 Swiper.use([Navigation, Pagination, FreeMode, Scrollbar]);
 export default function colorPickerJS() {
-
-
   (function sliderColor() {
-    const container = document.querySelector('.blockColorPicker');
+    const container = document.querySelector(".blockColorPicker");
 
     if (container) {
-      const slider = container.querySelector('.swiper-color');
-      const prev = container.querySelector('.arrow-prev');
-      const next = container.querySelector('.arrow-next');
+      const slider = container.querySelector(".swiper-color");
+      const prev = container.querySelector(".arrow-prev");
+      const next = container.querySelector(".arrow-next");
 
       const swiper = new Swiper(slider, {
         navigation: {
@@ -20,19 +18,18 @@ export default function colorPickerJS() {
         spaceBetween: 5,
         freeMode: true,
         scrollbar: {
-          el: '.swiper-scrollbar',
+          el: ".swiper-scrollbar",
           draggable: true,
           dragSize: 100,
         },
 
         breakpoints: {
-
           0: {
-            slidesPerView: 'auto',
+            slidesPerView: "auto",
           },
 
           576: {
-            slidesPerView: 'auto',
+            slidesPerView: "auto",
           },
 
           1025: {
@@ -45,126 +42,123 @@ export default function colorPickerJS() {
 
           1650: {
             slidesPerView: 7,
-          }
-        }
+          },
+        },
       });
 
       const setColorActive = (items, item, result) => {
-        items.removeClass('active');
-        item.addClass('active');
-        const attrColor = item.attr('data-color');
-        const attrNumber = item.attr('data-number');
-        const attrBase = item.attr('data-base');
-        localStorage.setItem('user-select-color', attrColor);
+        items.removeClass("active");
+        item.addClass("active");
+        const attrColor = item.attr("data-color");
+        const attrNumber = item.attr("data-number");
+        const attrBase = item.attr("data-base");
+        localStorage.setItem("user-select-color", attrColor);
         result.text(`NCS S ${attrNumber}-${attrBase}`);
-      }
-
+      };
 
       (function setBackground() {
-        const items = $('.item--color');
+        const items = $(".item--color");
 
-        items.each(function (e){
-          const attrColor = $(this).attr('data-color');
-          $(this).css('background', attrColor);
-        })
+        items.each(function (e) {
+          const attrColor = $(this).attr("data-color");
+          $(this).css("background", attrColor);
+        });
       })();
 
+      (function changeLocation() {
+        const buttonRoom = $(".data-button-colorpicker-room");
+        const buttonFC = $(".data-button-colorpicker-facad");
+        const contRoom = $(".data-picker-hard");
+        const contFC = $(".data-picker-normal");
 
+        buttonRoom.on("click", function () {
+          $(this).addClass("active");
+          buttonFC.removeClass("active");
+          contFC.css("display", "none");
+          contRoom.css("display", "block");
+        });
 
+        buttonFC.on("click", function () {
+          $(this).addClass("active");
+          buttonRoom.removeClass("active");
 
+          contRoom.css("display", "none");
+          contFC.css("display", "block");
+        });
+      })();
 
+      (function toggleActive() {
+        const item = $(".item--color");
+        const result = $(".blockColorPicker__result--code").find("a");
 
-
-      (function toggleActive(){
-        const item = $('.item--color');
-        const result = $('.blockColorPicker__result--code').find('a');
-
-        item.on('click', function () {
+        item.on("click", function () {
           setColorActive(item, $(this), result);
-        })
+        });
       })();
-
-
-
-
 
       (function startClickColor() {
-        const item = $('.item--color').eq(10);
+        const item = $(".item--color").eq(10);
         item.click();
       })();
-
     }
-
   })();
 
   function clickPicture(item) {
     const picture = $(item);
 
-
-    picture.on('click', function () {
-      const color = localStorage.getItem('user-select-color');
-      $(this).css('background', color);
-
+    picture.on("click", function () {
+      const color = localStorage.getItem("user-select-color");
+      $(this).css("background", color);
     });
   }
 
-
-    // clickPicture('.data-picker-hard')
-    clickPicture('.data-picker-normal')
-
+  // clickPicture('.data-picker-hard')
+  clickPicture(".data-picker-normal");
 
   function changeLocation() {
-    const buttonRoom = $('.data-button-colorpicker-room');
-    const buttonFC = $('.data-button-colorpicker-facad');
-    const contRoom = $('.data-picker-hard');
-    const contFC = $('.data-picker-normal');
+    const buttonRoom = $(".data-button-colorpicker-room");
+    const buttonFC = $(".data-button-colorpicker-facad");
+    const contRoom = $(".data-picker-hard");
+    const contFC = $(".data-picker-normal");
 
-    buttonRoom.on('click', function () {
-      $(this).addClass('active');
-      buttonFC.removeClass('active');
-      contFC.fadeOut('fast');
-      contRoom.fadeIn('fast');
+    buttonRoom.on("click", function () {
+      $(this).addClass("active");
+      buttonFC.removeClass("active");
+      contFC.fadeOut("fast");
+      contRoom.fadeIn("fast");
+    });
 
-    })
+    buttonFC.on("click", function () {
+      $(this).addClass("active");
+      buttonRoom.removeClass("active");
 
-    buttonFC.on('click', function () {
-      $(this).addClass('active');
-      buttonRoom.removeClass('active');
-
-      contRoom.fadeOut('fast');
-      contFC.fadeIn('fast');
-    })
+      contRoom.fadeOut("fast");
+      contFC.fadeIn("fast");
+    });
   }
 
-  changeLocation()
-
-
+  changeLocation();
 
   function canvasSleep() {
-    const canvas = document.getElementById('canvasRoom');
-
+    const canvas = document.getElementById("canvasRoom");
 
     if (canvas) {
-      const ctx = canvas.getContext('2d');
-      const img = document.querySelector('.data-img-room');
+      const ctx = canvas.getContext("2d");
+      const img = document.querySelector(".data-img-room");
 
       function clickTop() {
-        $('.data-picker-top').on('click', function() {
-          const color = localStorage.getItem('user-select-color');
+        $(".data-picker-top").on("click", function () {
+          const color = localStorage.getItem("user-select-color");
           console.log(color);
 
           top(color);
-        })
+        });
       }
 
-
-
-
       function top(color) {
-
         ctx.beginPath();
-			  ctx.moveTo(0, 0);
-			  ctx.lineTo(842, 0);
+        ctx.moveTo(0, 0);
+        ctx.lineTo(842, 0);
         ctx.lineTo(772, 66);
         ctx.lineTo(0, 66);
         ctx.lineTo(0, 0);
@@ -173,18 +167,13 @@ export default function colorPickerJS() {
 
         ctx.fill();
       }
-      top()
-      clickTop()
+      top();
+      clickTop();
       // clickTop()
 
-
       ctx.drawImage(img, 0, 0);
-
-
     }
   }
 
-  canvasSleep()
-
-
+  canvasSleep();
 }

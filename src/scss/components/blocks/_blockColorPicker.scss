@@ -16,83 +16,62 @@
 
   .data-picker-top {
     position: absolute;
+    z-index: 5;
     width: 76%;
     height: 11%;
-    z-index: 5;
   }
 
-  .data-bg-top {
+  .data-bg-room-top-1 {
     position: absolute;
+
+    // left: -2rem;
+    // left: -22.4%;
     top: 0;
-    left: -22.2%;
-    width: 100%;
-    // height: 11.3%;
-    height: 11%;
-    transform: skew(314deg);
-    background: #9f9f9f;
     z-index: 3;
-    // clip-path: polygon(0 0, 99% 0%, 91% 100%, 0 100%);
-    @include breakpoint(1800px) {
-      left: -16.9%;
-    }
+    clip-path: polygon(0 0, 80.6% 0, 74.1% 100%, 0 100%);
+    width: 100%;
+    height: 11.1%;
+    background: #9f9f9f;
 
-    @include big-desktop {
-      left: -12.3%;
-    }
-
-    @include breakpoint(1280px) {
-      left: -2.3%;
-    }
-
-    @include tablet {
-      left: -20.9%;
-    }
-
-    @include small-tablet {
-      left: -11.9%;
-    }
-
-    @include mobile {
-      left: -22.9%;
-    }
+    // transform: skew(314deg);
 
     // @include breakpoint(1800px) {
-    //   width: 88%;
-    //   clip-path: polygon(0 0, 99% 0%, 90% 100%, 0 100%);
+    // /  left: -22.4%;
     // }
 
-    // @include big-desktop {
-    //   width: 92%;
-    //   clip-path: polygon(0 0, 100% 0%, 91% 100%, 0 100%);
-    // }
-
-    // @include breakpoint(1280px) {
-    //   width: 100%;
-    //   clip-path: polygon(0 0, 103% 0%, 92% 100%, 0 100%);
-    // }
-
-    // @include tablet {
-    //   width: 83%;
-
-    //   clip-path: polygon(0 0, 99% 0%, 91% 100%, 0 100%);
-    // }
-
-    // @include small-tablet {
-    //   width: 92%;
-
-    //   clip-path: polygon(0 0, 100% 0%, 92% 100%, 0 100%);
-    // }
-
-    // @include mobile {
-    //   height: 11%;
-    //   width: 81%;
-    // }
+    @include breakpoint(1440px) {
+      clip-path: polygon(0 0, 91.5% 0, 82.6% 100%, 0 100%);
+    }
   }
-  .data-bg-wall {
+
+  .data-bg-room-wall-1 {
     position: absolute;
+    z-index: 2;
     width: 100%;
     height: 100%;
+    background: #9f9f9f;
+  }
+
+  .data-bg-room-top-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    clip-path: polygon(3% 0, 101.9% 0%, 88.4% 100%, 18% 100%);
+    width: 100%;
+    height: 15.3%;
+    background: #9f9f9f;
+
+    @include breakpoint(1440px) {
+      clip-path: polygon(0% 0, 102.5% 0%, 84.45% 100%, 0% 100%);
+    }
+  }
+
+  .data-bg-room-wall-2 {
+    position: absolute;
     z-index: 2;
+    width: 100%;
+    height: 100%;
     background: #9f9f9f;
   }
 
@@ -102,21 +81,21 @@
   }
 
   &__picture {
+    width: 100%;
+    height: 100%;
+
     &--cont {
-      width: 100%;
-      height: 580px;
-      max-width: 1040px;
-      overflow: hidden;
-      cursor: pointer;
       position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      max-width: 1040px;
+      cursor: pointer;
 
       @include mobile {
         height: auto;
       }
     }
-
-    width: 100%;
-    height: 100%;
 
     @include mobile {
       position: relative;
@@ -127,25 +106,41 @@
   &__buttons {
     display: flex;
     align-items: center;
+    margin-bottom: 50px;
     gap: 10px;
-    margin-bottom: 68px;
 
-    @include tablet {
-      margin-bottom: 30px;
+    &.tablet {
+      display: none;
+
+      @include tablet {
+        display: grid;
+        grid-template-columns: auto auto 30% 30%;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+
+      @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+        padding: 0 15px;
+      }
     }
 
-    @include mobile {
-      padding: 0 15px;
-      margin-bottom: 30px;
+    &.desk {
+      @include tablet {
+        display: none;
+      }
     }
   }
 
   &__button {
     border-radius: 100px;
-    background: var(--white-fourth);
-    color: var(--black-primary);
-    padding: 12px 30px;
+    padding: 12px 33px;
     line-height: 160%;
+    text-align: center;
+    color: var(--black-primary);
+    background: var(--white-fourth);
 
     &:not(.active) {
       @include hover {
@@ -154,45 +149,52 @@
     }
 
     &.active {
-      background: var(--black-primary);
       color: var(--white-primary);
+      background: var(--black-primary);
     }
 
-    @include mobile {
-      width: 100%;
+    @include big-desktop {
+      padding: 9px 22px;
+      font-size: 11.4px;
+    }
+
+    @include tablet {
+      padding: 9px 21px;
     }
   }
 
   &__canvas {
     &--top {
+      z-index: 5;
+
       // position: absolute;
       width: 100%;
+
       // height: 11%;
       height: 100%;
-      z-index: 5;
     }
   }
 
   &__top {
     position: absolute;
+    z-index: 5;
     width: 100%;
     height: 100%;
     background: #d9d9d9;
-    z-index: var(--z-color-picker-top);
-    z-index: 5;
     transform: translate(-10%, -90%) rotate(-45deg);
   }
 
   &__wall {
     position: absolute;
+    z-index: var(--z-color-picker-wall);
     width: 100%;
     height: 100%;
     background: #d9d9d9;
-    z-index: var(--z-color-picker-wall);
   }
 
   &__img {
     position: relative;
+
     // z-index: var(--z-color-picker-img);
   }
 
@@ -202,17 +204,9 @@
   &__slider {
     max-width: 730px;
 
-    @include big-desktop {
-      max-width: 520px;
-    }
-
-    @include tablet {
-      max-width: 100%;
-    }
-
     .swiper-horizontal > .swiper-scrollbar {
-      background: #eaebec;
       max-width: 652px;
+      background: #eaebec;
 
       @include big-desktop {
         max-width: 442px;
@@ -228,12 +222,12 @@
     }
 
     .swiper-scrollbar {
+      position: relative;
       left: 0;
       bottom: 0;
-      position: relative;
+      margin: 0 15px;
       width: 100%;
       height: 5px;
-      margin: 0 15px;
     }
 
     .swiper-scrollbar-drag {
@@ -246,36 +240,32 @@
     }
 
     .slider__bottom {
-      margin-top: 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: 14px;
 
       .arrowC {
-        max-width: 24px;
-        min-width: 24px;
-        max-height: 24px;
-        min-height: 24px;
+        position: relative;
         border-radius: 100px;
+        min-width: 24px;
+        min-height: 24px;
+        max-width: 24px;
+        max-height: 24px;
         background: var(--red-primary);
         transition: all 0.2s ease-in-out;
         cursor: pointer;
-        position: relative;
-
-        @include hover {
-          background: var(--red-primary-hover);
-        }
 
         i {
           content: "";
-          width: 8px;
-          height: 8px;
-          border: solid var(--white-primary);
-          border-width: 2px 0 0 2px;
-          transform: translate(-50%, -50%) rotate(-135deg);
           position: absolute;
           left: 50%;
           top: 50%;
+          border: solid var(--white-primary);
+          border-width: 2px 0 0 2px;
+          width: 8px;
+          height: 8px;
+          transform: translate(-50%, -50%) rotate(-135deg);
           transition: all 0.4s ease;
         }
 
@@ -292,38 +282,42 @@
             transform: translate(-50%, -50%) rotate(135deg);
           }
         }
+
+        @include hover {
+          background: var(--red-primary-hover);
+        }
       }
     }
 
     .blockColors {
       display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
       flex-direction: column;
+      flex-wrap: wrap;
       max-width: 100px;
+      gap: 5px;
 
       .item--color {
+        position: relative;
+        border: 3px solid transparent;
+        padding: 3px;
         width: 100px;
         height: 100px;
-        background: #ffffff;
-        cursor: pointer;
-        padding: 3px;
-        position: relative;
         box-sizing: border-box;
+        background: #fff;
         transition: all 0.2s ease;
-        border: 3px solid transparent;
+        cursor: pointer;
 
         i {
-          width: 24px;
-          height: 24px;
           position: absolute;
-          background: var(--black-primary);
-          border-radius: 100px;
-          bottom: 10px;
           right: 10px;
+          bottom: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
+          border-radius: 100px;
+          width: 24px;
+          height: 24px;
+          background: var(--black-primary);
           opacity: 0;
           visibility: hidden;
           transition: all 0.2s ease;
@@ -331,12 +325,12 @@
           &::after {
             content: "";
             display: block;
+            margin-top: -2px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
             width: 5px;
             height: 8px;
-            border: solid #ffffff;
-            border-width: 0 2px 2px 0;
             transform: rotate(45deg);
-            margin-top: -2px;
           }
         }
 
@@ -350,15 +344,23 @@
         }
       }
     }
+
+    @include big-desktop {
+      max-width: 520px;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__result {
     margin-top: 20px;
 
     &--word {
+      margin-bottom: 10px;
       font-weight: 500;
       font-size: 18px;
-      margin-bottom: 10px;
       line-height: 160%;
     }
 

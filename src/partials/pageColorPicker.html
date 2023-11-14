@@ -4,18 +4,37 @@
       <div class="blockTabs primary calculator">
         <div class="tabs tabs--primary">
           <ul class="tabs__nav tabs__nav--primary tabs__nav-to-dropdown">
-            <li class="tabs__nav-item tabs__nav-item--primary"><a href="serviceOrganizations.html"
-                                                                  class="tabs__nav-btn tabs__nav-btn--primary"
-                                                                  type="button">Торговым организациям</a></li>
-            <li class="tabs__nav-item tabs__nav-item--primary"><a href="serviceBuilder.html"
-                                                                  class="tabs__nav-btn tabs__nav-btn--primary tabs__nav-btn--active"
-                                                                  type="button">Строителям</a></li>
-            <li class="tabs__nav-item tabs__nav-item--primary"><a href="serviceBuyers.html"
-                                                                  class="tabs__nav-btn tabs__nav-btn--primary"
-                                                                  type="button">Покупателям</a></li>
-            <li class="tabs__nav-item tabs__nav-item--primary"><a href="serviceDesigner.html"
-                                                                  class="tabs__nav-btn tabs__nav-btn--primary"
-                                                                  type="button">Проектировщикам</a>
+            <li class="tabs__nav-item tabs__nav-item--primary">
+              <a
+                href="serviceOrganizations.html"
+                class="tabs__nav-btn tabs__nav-btn--primary"
+                type="button"
+                >Торговым организациям</a
+              >
+            </li>
+            <li class="tabs__nav-item tabs__nav-item--primary">
+              <a
+                href="serviceBuilder.html"
+                class="tabs__nav-btn tabs__nav-btn--primary tabs__nav-btn--active"
+                type="button"
+                >Строителям</a
+              >
+            </li>
+            <li class="tabs__nav-item tabs__nav-item--primary">
+              <a
+                href="serviceBuyers.html"
+                class="tabs__nav-btn tabs__nav-btn--primary"
+                type="button"
+                >Покупателям</a
+              >
+            </li>
+            <li class="tabs__nav-item tabs__nav-item--primary">
+              <a
+                href="serviceDesigner.html"
+                class="tabs__nav-btn tabs__nav-btn--primary"
+                type="button"
+                >Проектировщикам</a
+              >
             </li>
           </ul>
           <div class="tabs__content tabs__content--primary">
@@ -25,218 +44,126 @@
                   ← Назад
                 </a>
                 <div class="blockColorPicker">
-                  <div class="titleC secondary">
-                    Визуальный конфигуратор
-                  </div>
+                  <div class="titleC secondary">Визуальный конфигуратор</div>
                   <div class="blockColorPicker__container">
-                    <div class="blockColorPicker__picture--cont">
-                      <div class="blockColorPicker__picture data-picker-normal display-none">
-                        <img class="data-img-fasad" src="./img/fasad.png" alt="">
+                    <div class="blockColorPicker__buttons tablet">
+                      <a
+                        href="#tab1"
+                        class="btn-reset blockColorPicker__button active"
+                      >
+                        Комната
+                      </a>
+                      <a
+                        href="#tab2"
+                        class="btn-reset blockColorPicker__button"
+                      >
+                        Фасад
+                      </a>
+                      <a
+                        href="#tab3"
+                        class="btn-reset blockColorPicker__button"
+                      >
+                        Деревянная комната
+                      </a>
+                      <a
+                        href="#tab4"
+                        class="btn-reset blockColorPicker__button"
+                      >
+                        Деревянный фасад
+                      </a>
+                    </div>
+                    <div
+                      class="blockColorPicker__picture--cont tab-contents-color"
+                    >
+                      <div id="tab1" class="tab-contents active">
+                        <div class="blockColorPicker__picture data-picker-hard">
+                          <div class="data-bg-room-top-1"></div>
+                          <div class="data-bg-room-wall-1"></div>
+                          <picture>
+                            <source
+                              media="(max-width: 1441px)"
+                              srcset="./img/room-1-t.png"
+                            />
+                            <img
+                              class="blockColorPicker__img data-img-hard"
+                              src="./img/room-1-d.png"
+                              alt=""
+                            />
+                          </picture>
+                        </div>
                       </div>
-                      <div class="blockColorPicker__picture data-picker-hard">
-                        <div class="data-bg-top"></div>
-                        <div class="data-bg-wall"></div>
-                        <img class="blockColorPicker__img data-img-hard" src="./img/sleep.png" alt="">
+                      <div id="tab2" class="tab-contents">
+                        <div
+                          class="blockColorPicker__picture data-picker-fasad-one"
+                        >
+                          <picture>
+                            <source
+                              media="(max-width: 1441px)"
+                              srcset="./img/fasad-1-t.png"
+                            />
+                            <img src="./img/fasad.png" alt="" />
+                          </picture>
+                        </div>
+                      </div>
+                      <div id="tab3" class="tab-contents">
+                        <div class="blockColorPicker__picture data-picker-hard">
+                          <div class="data-bg-room-top-2"></div>
+                          <div class="data-bg-room-wall-2"></div>
+                          <picture>
+                            <source
+                              media="(max-width: 1441px)"
+                              srcset="./img/room-2-t.png"
+                            />
+                            <img
+                              class="blockColorPicker__img data-img-hard"
+                              src="./img/room-2-d.png"
+                              alt=""
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      <div id="tab4" class="tab-contents">
+                        <div
+                          class="blockColorPicker__picture data-picker-fasad-two"
+                        >
+                          <picture>
+                            <source
+                              media="(max-width: 1441px)"
+                              srcset="./img/fasad-2-t.png"
+                            />
+                            <img src="./img/fasad-2-d.png" alt="" />
+                          </picture>
+                        </div>
                       </div>
                     </div>
                     <div class="blockColorPicker__slider">
-                      <div class="blockColorPicker__buttons">
-                        <button class="btn-reset blockColorPicker__button data-button-colorpicker-room active">Комната</button>
-                        <button class="btn-reset blockColorPicker__button data-button-colorpicker-facad">Фасад</button>
+                      <div class="blockColorPicker__buttons desk">
+                        <a
+                          href="#tab1"
+                          class="btn-reset blockColorPicker__button active"
+                        >
+                          Комната
+                        </a>
+                        <a
+                          href="#tab2"
+                          class="btn-reset blockColorPicker__button"
+                        >
+                          Фасад
+                        </a>
+                        <a
+                          href="#tab3"
+                          class="btn-reset blockColorPicker__button"
+                        >
+                          Деревянная комната
+                        </a>
+                        <a
+                          href="#tab4"
+                          class="btn-reset blockColorPicker__button"
+                        >
+                          Деревянный фасад
+                        </a>
                       </div>
-
-                      <div class="swiper swiper-color">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="blockColors">
-                              <div data-name="NCS-213-3213123" data-color="#505a63" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1112" data-color="#d61c38" style="" class="item--color">
-                                <i></i>
-                              </div>
-                              <div  data-name="NCS-213-1232131111"data-color="#ffe4e8" style="" class="item--color">
-                                <i></i>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="slider__bottom">
-                          <div class="arrowC arrow-prev"><i></i></div>
-                          <div class="swiper-scrollbar"></div>
-                          <div class="arrowC arrow-next"><i></i></div>
-                        </div>
-                      </div>
+                      @include('blocks/swiperColor.html')
                       <div class="blockColorPicker__result">
                         <div class="blockColorPicker__result--word">
                           Выбранный цвет:
@@ -245,7 +172,8 @@
                           Краска для бетонных полов Aquastrong
                         </div>
                         <div class="blockColorPicker__result--code">
-                          <span>Цвет:</span><span class="code">NCS S 0560-Y90R</span>
+                          <span>Цвет:</span
+                          ><span class="code">NCS S 0560-Y90R</span>
                         </div>
                       </div>
                     </div>
@@ -259,13 +187,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-

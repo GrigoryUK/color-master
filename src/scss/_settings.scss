@@ -18,18 +18,18 @@ html {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
-  font-size: 16px;
   font-family: "Aquawax Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 1.5;
   color: var(--black-primary);
-  font-weight: 400;
   background: var(--white-primary);
 }
 
 img {
-  height: 100%;
-  width: 100%;
   display: flex;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: all 0.2s ease;
 }
@@ -48,15 +48,15 @@ a {
 }
 
 button {
-  transition: all 0.2s ease;
   box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
 input,
 textarea {
   outline: none;
-  transition: all 0.2s ease;
   box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
 .site-container {
@@ -163,5 +163,13 @@ textarea {
 
   @include tablet {
     height: calc(100vh - var(--height-header-tablet));
+  }
+}
+
+.tab-contents {
+  display: none;
+
+  &.active {
+    display: block;
   }
 }
